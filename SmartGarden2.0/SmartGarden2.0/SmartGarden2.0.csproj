@@ -49,6 +49,7 @@
     <Compile Include="Controller\Controller.cs" />
     <Compile Include="GestioneGiardino.cs" />
     <Compile Include="FabbisognoGiornalieroPeriodo.cs" />
+    <Compile Include="FornitoreDatiMeteo.cs" />
     <Compile Include="View\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>

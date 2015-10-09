@@ -1,5 +1,4 @@
 ﻿using SmartGarden2._0.Control;
-using SmartGarden2._0.Controller;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,13 +21,27 @@ namespace SmartGarden2._0
             InitializeComponent();
             _gestioneGiardino = new GestioneGiardino();
             _controller = new Controller(_gestioneGiardino);
+            
         }
 
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            _controller.CreateLoginForm();
-          
+
+            bool loginOk = _controller.CreateLoginForm();
+            if (!loginOk)
+                this.Close();
+
+            //test
+            FornitoreDatiMeteo fornitore = new FornitoreDatiMeteo("Modena");
+
+            _textBox.Text += "Meteo di domani a Modena\r\n";
+
+            double temp = fornitore.GetTemperatura();
+            _textBox.Text += "\r\nTemperatura: " + temp + "°C";
+
+            double prec = fornitore.GetPrecipitazioni();
+            _textBox.Text += "\r\nPrecipitazioni: " + prec + " mm";
         }
     }
 }
