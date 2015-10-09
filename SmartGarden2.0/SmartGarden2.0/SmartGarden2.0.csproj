@@ -47,6 +47,8 @@
   <ItemGroup>
     <Compile Include="Cisterna.cs" />
     <Compile Include="Controller\Controller.cs" />
+    <Compile Include="FornitorePrecipitazioni.cs" />
+    <Compile Include="FornitoreTemperatura.cs" />
     <Compile Include="GestioneGiardino.cs" />
     <Compile Include="FabbisognoGiornalieroPeriodo.cs" />
     <Compile Include="FornitoreDatiMeteo.cs" />

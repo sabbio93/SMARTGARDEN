@@ -10,9 +10,10 @@ using System.Xml.XPath;
 
 namespace SmartGarden2._0
 {
-    class FornitoreDatiMeteo
+    abstract class FornitoreDatiMeteo
     {
         private XmlDocument _xmlDati;
+        private int _numeroIntervalloTempo = 8; //di default il meteo prende le informazioni di 24 ore dopo (3 ore a intervallo, 8° intervallo->24h)
         public string Città { get; set; }
 
         public FornitoreDatiMeteo(string città)
@@ -32,17 +33,18 @@ namespace SmartGarden2._0
              }*/
         }
 
-        public double GetTemperatura()
+        public int NumeroIntervalloTempo
         {
-            return GetDato("temperature");
+            set
+            {
+                if (value >= 0)
+                    _numeroIntervalloTempo = value;
+            }
         }
 
-        public double GetPrecipitazioni()
-        {
-            return GetDato("precipitation");
-        }
+        abstract public double GetInformazione();  //metodo che ogni classe ridefinisce
 
-        private double GetDato(string datoRichiesto)  //funzione generica per prendere temperatura o precipitazioni
+        public double GetDato(string datoRichiesto)  //funzione generica per prendere dati
         {
             double dato = 0;
 
@@ -56,7 +58,7 @@ namespace SmartGarden2._0
 
             while (iterator.MoveNext())
             {
-                if (i == 7) //stabilisce quale "intervallo" di 3 ore parsare
+                if (i == _numeroIntervalloTempo) //stabilisce quale "intervallo" di 3 ore parsare
                 {
                     if (iterator.Current.HasAttributes)
                         dato = double.Parse(iterator.Current.GetAttribute("value", ""), CultureInfo.InvariantCulture);
@@ -67,5 +69,18 @@ namespace SmartGarden2._0
 
             return dato;
         }
+        
+
+
+        /*public double GetTemperatura()
+        {
+            return GetDato("temperature");
+        }
+
+        public double GetPrecipitazioni()
+        {
+            return GetDato("precipitation");
+        }*/
+
     }
 }

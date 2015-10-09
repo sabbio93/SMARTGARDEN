@@ -33,14 +33,18 @@ namespace SmartGarden2._0
                 this.Close();
 
             //test
-            FornitoreDatiMeteo fornitore = new FornitoreDatiMeteo("Modena");
+            // FornitoreDatiMeteo fornitore = new FornitoreDatiMeteo("Modena");
+
+            FornitorePrecipitazioni fornitorePrec = new FornitorePrecipitazioni("Modena");
+            FornitoreTemperatura fornitoreTemp = new FornitoreTemperatura("Modena");
+
 
             _textBox.Text += "Meteo di domani a Modena\r\n";
 
-            double temp = fornitore.GetTemperatura();
+            double temp = fornitoreTemp.GetInformazione();
             _textBox.Text += "\r\nTemperatura: " + temp + "°C";
 
-            double prec = fornitore.GetPrecipitazioni();
+            double prec = fornitorePrec.GetInformazione();
             _textBox.Text += "\r\nPrecipitazioni: " + prec + " mm";
         }
     }
