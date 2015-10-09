@@ -1,4 +1,4 @@
-﻿namespace SmartGarden2._0.Controller
+﻿namespace SmartGarden2._0
 {
     public class GestioneGiardino
     {
