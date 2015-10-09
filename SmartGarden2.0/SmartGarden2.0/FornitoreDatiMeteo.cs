@@ -27,7 +27,7 @@ namespace SmartGarden2._0
             //commentate perchè c'è un limite di richieste al servizio meteo, usiamo l'xml già fatto
             /* if (Città != null)
              {
-                 _xmlDati.Load("http://api.openweathermap.org/data/2.5/forecast/city?q=" + Città + "&APPID=3468347b36b867d8ef1978a625d84616&mode=xml");  //3468347b36b867d8ef1978a625d84616 è la mia chiave personale
+                 _xmlDati.Load("http://api.openweathermap.org/data/2.5/forecast/city?q=" + Città + "&APPID=3468347b36b867d8ef1978a625d84616&mode=xml");
                  _xmlDati.Save("DatiMeteo.xml");
              }*/
         }
