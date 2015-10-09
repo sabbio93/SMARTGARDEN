@@ -15,13 +15,10 @@ namespace SmartGarden2._0
     public partial class LoginForm : Form
     {
         private bool _isValid;
+
         public LoginForm()
         {
             InitializeComponent();
-
-            _confermaPwBox.Enabled = false;
-            _confermaPwBox.Visible = false;
-            _confermaPwLabel.Visible = false;
         }
 
         protected override void OnLoad(EventArgs e)
@@ -37,7 +34,7 @@ namespace SmartGarden2._0
 
             using (PrincipalContext pc = new PrincipalContext(ContextType.Machine))
             {
-                _isValid = pc.ValidateCredentials(Environment.UserName, password, ContextOptions.Negotiate);
+                _isValid = pc.ValidateCredentials(Environment.UserName, password);
             }
 
             if (_isValid)
@@ -58,7 +55,6 @@ namespace SmartGarden2._0
         private void _resetButton_Click(object sender, EventArgs e)
         {
             _passwordBox.Clear();
-            _confermaPwBox.Clear();
         }
     }
 }

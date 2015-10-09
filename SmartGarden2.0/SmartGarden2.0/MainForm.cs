@@ -26,7 +26,13 @@ namespace SmartGarden2._0
 
                 if (result == DialogResult.OK)
                 {
-                    //carica utente e schermata principale
+                    //carica schermata principale
+                    Piante piante = new Piante();
+                    piante.ListaPiante.Add(new Pianta("Pomodoro", "Solanum lycopersicum"));
+                    piante.ListaPiante.Add(new Pianta("Lattuga", "Lactuca sativa"));
+                    foreach (Pianta pianta in piante.ListaPiante) {
+                        _textBox.Text += pianta.NomeBotanico + "\r\n";
+                    }
                 }
                 else
                 {

@@ -19,6 +19,7 @@ namespace SmartGarden2._0
 
             NomeBotanico = nomeBotanico;
             NomeComune = nomeComune;
+            _fabbisogni = new List<FabbisognoGiornalieroPeriodo>();
         }
 
         public double FabbisognoPiantaAttuale()
