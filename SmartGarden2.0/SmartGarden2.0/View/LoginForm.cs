@@ -56,5 +56,10 @@ namespace SmartGarden2._0
         {
             _passwordBox.Clear();
         }
+
+        private void _passwordLabel_Click(object sender, EventArgs e)
+        {
+            //nothing
+        }
     }
 }

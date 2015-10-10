@@ -87,7 +87,7 @@
             // 
             this._passwordBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._passwordBox.Location = new System.Drawing.Point(149, 89);
-            this._passwordBox.MaxLength = 15;
+            this._passwordBox.MaxLength = 0;
             this._passwordBox.Name = "_passwordBox";
             this._passwordBox.PasswordChar = '*';
             this._passwordBox.Size = new System.Drawing.Size(157, 22);
@@ -98,7 +98,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(95, 38);
+            this.label1.Location = new System.Drawing.Point(109, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 25);
             this.label1.TabIndex = 4;
@@ -114,6 +114,7 @@
             this._passwordLabel.Size = new System.Drawing.Size(71, 16);
             this._passwordLabel.TabIndex = 3;
             this._passwordLabel.Text = "Password:";
+            this._passwordLabel.Click += new System.EventHandler(this._passwordLabel_Click);
             // 
             // LoginForm
             // 
