@@ -35,7 +35,7 @@ namespace SmartGarden2._0
 
         public virtual void OnCompleted()
         {
-            Console.WriteLine("Manage of Valvola would not be more available");
+            Console.WriteLine("La gestione della valvola non sarà più disponibile");
         }
 
         public virtual void OnError(Exception error)
@@ -45,7 +45,7 @@ namespace SmartGarden2._0
 
         public void OnNext(long value)
         {
-            Console.WriteLine(_name + ":mi apro");
+            Console.WriteLine("Valvola " + _name + ": mi apro");
         }
     }
 }

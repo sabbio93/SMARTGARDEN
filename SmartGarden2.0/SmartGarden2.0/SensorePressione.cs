@@ -8,7 +8,7 @@ namespace SmartGarden2._0
     class SensorePressione
     {
         public string Descrizione { get; set; }
-        //public Valvola ValvolaCentrale { get; set; }
+        public Valvola ValvolaCentrale { get; set; }
 
         public SensorePressione(string descrizione)
         {
