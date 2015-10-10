@@ -16,14 +16,15 @@ namespace SmartGarden2._0
         {
             base.OnLoad(e);
 
-            GestioneGiardino gestioneGiardino = new GestioneGiardino();
-            Controller controller = new Controller(gestioneGiardino);
+            GestioneGiardino gestoreGiardino = new GestioneGiardino();
+            Controller controller = new Controller(gestoreGiardino);
 
             bool loginOk = controller.CreateLoginForm();
             if (!loginOk)
                 this.Close();
-            
-            //_pannelloSinistra
+
+            _pannelloSinistra.GestoreGiardino = gestoreGiardino; //set del model
+            _pannelloSinistra.Controller = controller; //set del controller
 
 
 

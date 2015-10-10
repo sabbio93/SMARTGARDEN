@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Globalization;
 using System.Xml;
 using System.Xml.XPath;
 
@@ -69,18 +63,6 @@ namespace SmartGarden2._0
 
             return dato;
         }
-        
-
-
-        /*public double GetTemperatura()
-        {
-            return GetDato("temperature");
-        }
-
-        public double GetPrecipitazioni()
-        {
-            return GetDato("precipitation");
-        }*/
 
     }
 }
