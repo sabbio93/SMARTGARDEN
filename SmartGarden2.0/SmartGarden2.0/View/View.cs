@@ -37,7 +37,7 @@ namespace SmartGarden2._0.View
                     if (_gestoreGiardino != null)
                     {
                         _gestoreGiardino.Changed += OnModelChanged; //registrazione al model
-                        OnModelChanged(_gestoreGiardino, EventArgs.Empty);
+                        //OnModelChanged(_gestoreGiardino, EventArgs.Empty);
                     }
                 }
             }
