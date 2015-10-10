@@ -10,22 +10,32 @@ namespace TimerPassivo
     {
         private Valvola _valvola;
         private String _nome;
+        private double _portataImpianto;
 
         public Settore(string nome)
         {
             _valvola = new Valvola();
             _nome = nome;
+            _portataImpianto = 0;
         }
 
         public String Nome
         {
-            get
-            {
-                return _nome;
-            }
+            get { return _nome; }
             set
             {
-                _nome = value;
+                if(string.IsNullOrEmpty(value))
+                    _nome = value;
+            }
+        }
+
+        public double PortataImpianto
+        {
+            get { return _portataImpianto; }
+            set
+            {
+                if (value >= 0)
+                    _portataImpianto = value;
             }
         }
 
