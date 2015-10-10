@@ -35,8 +35,8 @@ namespace SmartGarden2._0
             //test
             // FornitoreDatiMeteo fornitore = new FornitoreDatiMeteo("Modena");
 
-            FornitoreDatiMeteo fornitorePrec = new FornitorePrecipitazioni("Modena");
-            FornitoreDatiMeteo fornitoreTemp = new FornitoreTemperatura("Modena");
+            FornitoreInformazioniMeteo fornitorePrec = new FornitorePrecipitazioni("Modena");
+            FornitoreInformazioniMeteo fornitoreTemp = new FornitoreTemperatura("Modena");
 
 
             _textBox.Text += "Meteo di domani a Modena\r\n";

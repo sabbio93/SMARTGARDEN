@@ -10,13 +10,13 @@ using System.Xml.XPath;
 
 namespace SmartGarden2._0
 {
-    abstract class FornitoreDatiMeteo
+    abstract class FornitoreInformazioniMeteo
     {
         private XmlDocument _xmlDati;
         private int _numeroIntervalloTempo = 8; //di default il meteo prende le informazioni di 24 ore dopo (3 ore a intervallo, 8° intervallo->24h)
         public string Città { get; set; }
 
-        public FornitoreDatiMeteo(string città)
+        public FornitoreInformazioniMeteo(string città)
         {
             Città = città;
             _xmlDati = new XmlDocument();
@@ -44,7 +44,7 @@ namespace SmartGarden2._0
 
         abstract public double GetInformazione();  //metodo che ogni classe ridefinisce
 
-        public double GetDato(string datoRichiesto)  //funzione generica per prendere dati
+        protected double GetDato(string datoRichiesto)  //funzione generica per prendere dati
         {
             double dato = 0;
 

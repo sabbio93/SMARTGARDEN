@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmartGarden2._0
 {
-    class FornitorePrecipitazioni : FornitoreDatiMeteo
+    class FornitorePrecipitazioni : FornitoreInformazioniMeteo
     {
         public FornitorePrecipitazioni(string città) : base(città)
         {

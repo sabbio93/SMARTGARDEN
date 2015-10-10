@@ -9,7 +9,7 @@ namespace SmartGarden2._0
     class Valvola : IObserver<long>
     {
         private String _name;
-        private IDisposable unsubscriber;
+        private IDisposable _unsubscriber;
 
         public String Name
         {
@@ -25,12 +25,12 @@ namespace SmartGarden2._0
 
         public virtual void Subscribe(IObservable<long> provider)
         {
-            unsubscriber = provider.Subscribe(this);
+            _unsubscriber = provider.Subscribe(this);
         }
 
         public virtual void Unsubscribe()
         {
-            unsubscriber.Dispose();
+            _unsubscriber.Dispose();
         }
 
         public virtual void OnCompleted()

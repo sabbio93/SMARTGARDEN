@@ -52,7 +52,7 @@
     <Compile Include="FornitoreTemperatura.cs" />
     <Compile Include="GestioneGiardino.cs" />
     <Compile Include="FabbisognoGiornalieroPeriodo.cs" />
-    <Compile Include="FornitoreDatiMeteo.cs" />
+    <Compile Include="FornitoreInformazioniMeteo.cs" />
     <Compile Include="Giardino.cs" />
     <Compile Include="MyTimer.cs" />
     <Compile Include="Settori.cs" />
