@@ -8,26 +8,30 @@ namespace TimerPassivo
 {
     class Settore
     {
-        Valvola valvola;
-        String name;
+        private Valvola _valvola;
+        private String _nome;
+
+        public Settore(string nome)
+        {
+            _valvola = new Valvola();
+            _nome = nome;
+        }
 
         public String Nome
         {
             get
             {
-                return name;
+                return _nome;
             }
             set
             {
-                name = value;
-                valvola = new Valvola();
-                valvola.Name = "valvola" + name;
+                _nome = value;
             }
         }
 
         internal void setTimer(IObservable<long> timer)
         {
-            timer.Subscribe(valvola);
+            timer.Subscribe(_valvola);
         }
     }
 }
