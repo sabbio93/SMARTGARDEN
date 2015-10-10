@@ -28,6 +28,10 @@ namespace SmartGarden2._0.View
             {
                 if (value != _gestoreGiardino)
                 {
+                    if (_gestoreGiardino != null)
+                    {
+                        _gestoreGiardino.Changed -= OnModelChanged; // deregistrazione
+                    }
                     _gestoreGiardino = value;
 
                     if (_gestoreGiardino != null)

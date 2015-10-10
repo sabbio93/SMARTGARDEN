@@ -1,12 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace SmartGarden2._0.View
 {
@@ -19,6 +11,11 @@ namespace SmartGarden2._0.View
 
         protected override void OnModelChanged(object sender, EventArgs e)
         {
+            if (sender == GestoreGiardino)
+            {
+                _textBox.Text += "Temperatura di domani, Modena: " + GestoreGiardino.Temperatura + "°C\r\n";
+                _textBox.Text += "Precipitazioni di domani, Modena: " + GestoreGiardino.Precipitazioni + " mm\r\n";
+            }
         }
     }
 }

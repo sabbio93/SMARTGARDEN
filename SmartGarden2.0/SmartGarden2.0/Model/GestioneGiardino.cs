@@ -7,6 +7,7 @@ namespace SmartGarden2._0
         private Giardino _giardino;
         public event EventHandler Changed;
 
+
         public GestioneGiardino()
         {
             _giardino = new Giardino();
@@ -19,12 +20,27 @@ namespace SmartGarden2._0
         }
 
 
-        /*Piante piante = new Piante();
-        piante.ListaPiante.Add(new Pianta("Pomodoro", "Solanum lycopersicum"));
-        piante.ListaPiante.Add(new Pianta("Lattuga", "Lactuca sativa"));
-        foreach (Pianta pianta in piante.ListaPiante)
+        //codice di prova
+        private double _temp, _prec;
+
+        public double Temperatura
         {
-            _textBox.Text += pianta.NomeBotanico + "\r\n";
-        }*/
+            get { return _temp; }
+        }
+
+        public double Precipitazioni
+        {
+            get { return _prec; }
+        }
+
+        public void ProvaCaricamentoInfoMeteo()
+        {
+            FornitoreInformazioniMeteo fornitorePrec = new FornitorePrecipitazioni("Modena");
+            FornitoreInformazioniMeteo fornitoreTemp = new FornitoreTemperatura("Modena");
+            _temp = fornitoreTemp.GetInformazione();
+            _prec = fornitorePrec.GetInformazione();
+            
+            OnChanged();
+        }
     }
 }

@@ -34,11 +34,9 @@
             this.toolStripMenuItem24 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem29 = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this._textBox = new System.Windows.Forms.TextBox();
-            this._pannelloSinistra = new SmartGarden2._0.View.View1();
+            this._pannelloDestra = new SmartGarden2._0.View.View1();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.SuspendLayout();
@@ -88,35 +86,22 @@
             this.splitContainer2.Location = new System.Drawing.Point(0, 24);
             this.splitContainer2.Name = "splitContainer2";
             // 
-            // splitContainer2.Panel1
-            // 
-            this.splitContainer2.Panel1.Controls.Add(this._pannelloSinistra);
-            // 
             // splitContainer2.Panel2
             // 
-            this.splitContainer2.Panel2.Controls.Add(this._textBox);
+            this.splitContainer2.Panel2.Controls.Add(this._pannelloDestra);
             this.splitContainer2.Size = new System.Drawing.Size(483, 307);
             this.splitContainer2.SplitterDistance = 121;
             this.splitContainer2.TabIndex = 1;
             // 
-            // _textBox
+            // _pannelloDestra
             // 
-            this._textBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._textBox.Location = new System.Drawing.Point(0, 0);
-            this._textBox.Multiline = true;
-            this._textBox.Name = "_textBox";
-            this._textBox.Size = new System.Drawing.Size(358, 307);
-            this._textBox.TabIndex = 0;
-            // 
-            // _pannelloSinistra
-            // 
-            this._pannelloSinistra.Controller = null;
-            this._pannelloSinistra.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._pannelloSinistra.GestoreGiardino = null;
-            this._pannelloSinistra.Location = new System.Drawing.Point(0, 0);
-            this._pannelloSinistra.Name = "_pannelloSinistra";
-            this._pannelloSinistra.Size = new System.Drawing.Size(121, 307);
-            this._pannelloSinistra.TabIndex = 0;
+            this._pannelloDestra.Controller = null;
+            this._pannelloDestra.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._pannelloDestra.GestoreGiardino = null;
+            this._pannelloDestra.Location = new System.Drawing.Point(0, 0);
+            this._pannelloDestra.Name = "_pannelloDestra";
+            this._pannelloDestra.Size = new System.Drawing.Size(358, 307);
+            this._pannelloDestra.TabIndex = 0;
             // 
             // MainWindow
             // 
@@ -127,9 +112,7 @@
             this.Text = "SmartGarden";
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
-            this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
-            this.splitContainer2.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -174,9 +157,8 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem24;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem29;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.TextBox _textBox;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem11;
-        private View.View1 _pannelloSinistra;
+        private View.View1 _pannelloDestra;
     }
 }

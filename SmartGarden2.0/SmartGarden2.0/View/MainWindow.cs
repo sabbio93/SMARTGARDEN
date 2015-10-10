@@ -22,28 +22,12 @@ namespace SmartGarden2._0
             bool loginOk = controller.CreateLoginForm();
             if (!loginOk)
                 this.Close();
+            
+            _pannelloDestra.GestoreGiardino = gestoreGiardino; //set del model
+            _pannelloDestra.Controller = controller; //set del controller
 
-            _pannelloSinistra.GestoreGiardino = gestoreGiardino; //set del model
-            _pannelloSinistra.Controller = controller; //set del controller
-
-
-
-
-            //TEST
-
-            // FornitoreDatiMeteo fornitore = new FornitoreDatiMeteo("Modena");
-
-            FornitoreInformazioniMeteo fornitorePrec = new FornitorePrecipitazioni("Modena");
-            FornitoreInformazioniMeteo fornitoreTemp = new FornitoreTemperatura("Modena");
-
-
-            _textBox.Text += "Meteo di domani a Modena\r\n";
-
-            double temp = fornitoreTemp.GetInformazione();
-            _textBox.Text += "\r\nTemperatura: " + temp + "°C";
-
-            double prec = fornitorePrec.GetInformazione();
-            _textBox.Text += "\r\nPrecipitazioni: " + prec + " mm";
+            //test
+            gestoreGiardino.ProvaCaricamentoInfoMeteo();
         }
     }
 }
