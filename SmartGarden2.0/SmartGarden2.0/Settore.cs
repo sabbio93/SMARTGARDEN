@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TimerPassivo
+namespace SmartGarden2._0
 {
     class Settore
     {
-        private Valvola _valvola;
+        private Valvola _valvolaSettore;
         private String _nome;
         private double _portataImpianto;
 
         public Settore(string nome)
         {
-            _valvola = new Valvola();
+            _valvolaSettore = new Valvola();
             _nome = nome;
             _portataImpianto = 0;
         }
@@ -41,7 +41,7 @@ namespace TimerPassivo
 
         internal void setTimer(IObservable<long> timer)
         {
-            timer.Subscribe(_valvola);
+            timer.Subscribe(_valvolaSettore);
         }
     }
 }

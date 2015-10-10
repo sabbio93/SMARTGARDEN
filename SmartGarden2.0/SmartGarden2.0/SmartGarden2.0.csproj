@@ -55,6 +55,7 @@
     <Compile Include="FornitoreDatiMeteo.cs" />
     <Compile Include="Giardino.cs" />
     <Compile Include="MyTimer.cs" />
+    <Compile Include="Settori.cs" />
     <Compile Include="Valvola.cs" />
     <Compile Include="Settore.cs" />
     <Compile Include="View\LoginForm.cs">

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TimerPassivo
+namespace SmartGarden2._0
 {
     class Valvola : IObserver<long>
     {

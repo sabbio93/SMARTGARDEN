@@ -2,6 +2,13 @@
 {
     public class GestioneGiardino
     {
+        private Giardino _giardino;
+
+        public GestioneGiardino()
+        {
+            _giardino = new Giardino();
+        }
+
         //aggiorna view principale
 
         /*Piante piante = new Piante();
