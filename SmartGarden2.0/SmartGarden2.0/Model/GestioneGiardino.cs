@@ -54,14 +54,15 @@ namespace SmartGarden2._0
             _settore1.Piante = _piante;
             _settori.ListaSettori.Add(_settore1);
             _settori.ListaSettori.Add(_settore2);
+            _giardino.Settori = _settori;
 
             OnChanged();
         }
 
       
-        public Settori Settori
+        public Giardino Giardino
         {
-            get { return _settori; }
+            get { return _giardino; }
         }
 
     }

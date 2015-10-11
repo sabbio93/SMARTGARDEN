@@ -19,9 +19,10 @@ namespace SmartGarden2._0
             _settori = new Settori();
         }
 
-        public List<Settore> ListaSettori
+        public Settori Settori
         {
-            get { return _settori.ListaSettori; }
+            get { return _settori; }
+            set { _settori = value; }
         }
     }
 }
