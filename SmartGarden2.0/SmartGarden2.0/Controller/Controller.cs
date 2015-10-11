@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SmartGarden2._0.Control
 {
-    class Controller
+    public class Controller
     {
         private readonly GestioneGiardino _gestioneGiardino; //GestioneGiardino è il model
 
@@ -31,6 +27,11 @@ namespace SmartGarden2._0.Control
                     return false;
                 }
             }
+        }
+
+        internal void CaricaSettori()
+        {
+            _gestioneGiardino.ProvaCaricamentoInfo();
         }
     }
 }

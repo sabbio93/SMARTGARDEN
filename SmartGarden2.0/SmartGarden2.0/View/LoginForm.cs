@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Security;
 using System.DirectoryServices.AccountManagement;
 
 namespace SmartGarden2._0
@@ -32,10 +24,11 @@ namespace SmartGarden2._0
             string password = _passwordBox.Text;
 
 
-            using (PrincipalContext pc = new PrincipalContext(ContextType.Machine))
+            /*using (PrincipalContext pc = new PrincipalContext(ContextType.Machine))
             {
                 _isValid = pc.ValidateCredentials(Environment.UserName, password);
-            }
+            }*/
+            _isValid = true;
 
             if (_isValid)
             {
@@ -50,11 +43,14 @@ namespace SmartGarden2._0
 
         }
 
-
-
         private void _resetButton_Click(object sender, EventArgs e)
         {
             _passwordBox.Clear();
+        }
+
+        private void _passwordLabel_Click(object sender, EventArgs e)
+        {
+            //nothing
         }
     }
 }

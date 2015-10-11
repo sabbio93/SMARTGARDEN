@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmartGarden2._0
 {
-    class Cisterna
+    public class Cisterna
     {
         public double Portata { get; set; }
         public double Capienza { get; set; }

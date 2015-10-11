@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TimerPassivo
+namespace SmartGarden2._0
 {
-    class Valvola : IObserver<long>
+    public class Valvola : IObserver<long>
     {
         private String _name;
-        private IDisposable unsubscriber;
+        private IDisposable _unsubscriber;
 
         public String Name
         {
@@ -25,17 +25,17 @@ namespace TimerPassivo
 
         public virtual void Subscribe(IObservable<long> provider)
         {
-            unsubscriber = provider.Subscribe(this);
+            _unsubscriber = provider.Subscribe(this);
         }
 
         public virtual void Unsubscribe()
         {
-            unsubscriber.Dispose();
+            _unsubscriber.Dispose();
         }
 
         public virtual void OnCompleted()
         {
-            Console.WriteLine("Manage of Valvola would not be more available");
+            Console.WriteLine("La gestione della valvola non sarà più disponibile");
         }
 
         public virtual void OnError(Exception error)
@@ -45,7 +45,7 @@ namespace TimerPassivo
 
         public void OnNext(long value)
         {
-            Console.WriteLine(_name + ":mi apro");
+            Console.WriteLine("Valvola " + _name + ": mi apro");
         }
     }
 }
