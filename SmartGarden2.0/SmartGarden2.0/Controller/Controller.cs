@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace SmartGarden2._0.Control
 {
@@ -26,6 +27,11 @@ namespace SmartGarden2._0.Control
                     return false;
                 }
             }
+        }
+
+        internal void CaricaSettori()
+        {
+            _gestioneGiardino.ProvaCaricamentoInfo();
         }
     }
 }

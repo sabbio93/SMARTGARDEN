@@ -24,10 +24,11 @@ namespace SmartGarden2._0
             string password = _passwordBox.Text;
 
 
-            using (PrincipalContext pc = new PrincipalContext(ContextType.Machine))
+            /*using (PrincipalContext pc = new PrincipalContext(ContextType.Machine))
             {
                 _isValid = pc.ValidateCredentials(Environment.UserName, password);
-            }
+            }*/
+            _isValid = true;
 
             if (_isValid)
             {
@@ -41,8 +42,6 @@ namespace SmartGarden2._0
             }
 
         }
-
-
 
         private void _resetButton_Click(object sender, EventArgs e)
         {

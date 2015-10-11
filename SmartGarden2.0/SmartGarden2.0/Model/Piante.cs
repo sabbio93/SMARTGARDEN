@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmartGarden2._0
 {
-    class Piante
+    public class Piante
     {
         private List<Pianta> _piante;
 
@@ -29,6 +29,20 @@ namespace SmartGarden2._0
         public List<Pianta> ListaPiante
         {
             get { return _piante; }
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            foreach (Pianta pianta in ListaPiante)
+            {
+                sb.AppendLine("Nome Comune: " + pianta.NomeComune);
+                sb.AppendLine("Nome Botanico: " + pianta.NomeBotanico);
+                sb.AppendLine();
+            }
+
+            return sb.ToString();
         }
     }
 }

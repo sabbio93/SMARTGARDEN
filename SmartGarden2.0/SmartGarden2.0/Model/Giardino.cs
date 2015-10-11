@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmartGarden2._0
 {
-    class Giardino
+    public class Giardino
     {
         public string Luogo { get; set; }
 

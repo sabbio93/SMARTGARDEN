@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmartGarden2._0
 {
-    class Settori
+    public class Settori
     {
         private List<Settore> _listaSettori;
 
@@ -18,6 +18,18 @@ namespace SmartGarden2._0
         public List<Settore> ListaSettori
         {
             get { return _listaSettori; }
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            foreach (Settore settore in ListaSettori)
+            {
+                sb.AppendLine(settore.Nome);
+            }
+
+            return sb.ToString();
         }
 
     }

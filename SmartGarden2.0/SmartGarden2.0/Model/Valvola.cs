@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmartGarden2._0
 {
-    class Valvola : IObserver<long>
+    public class Valvola : IObserver<long>
     {
         private String _name;
         private IDisposable _unsubscriber;

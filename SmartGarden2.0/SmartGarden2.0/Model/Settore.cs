@@ -6,17 +6,19 @@ using System.Threading.Tasks;
 
 namespace SmartGarden2._0
 {
-    class Settore
+    public class Settore
     {
         private Valvola _valvolaSettore;
         private String _nome;
         private double _portataImpianto;
+        private Piante _piante;
 
         public Settore(string nome)
         {
             _valvolaSettore = new Valvola();
             _nome = nome;
             _portataImpianto = 0;
+            _piante = new Piante();
         }
 
         public String Nome
@@ -39,9 +41,17 @@ namespace SmartGarden2._0
             }
         }
 
+        public Piante Piante
+        {
+            get { return _piante; }
+            set { _piante = value; }
+        }
+
         internal void setTimer(IObservable<long> timer)
         {
             timer.Subscribe(_valvolaSettore);
         }
+
+   
     }
 }

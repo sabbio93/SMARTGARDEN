@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SmartGarden2._0
 {
-    class Pianta
+    public class Pianta
     {
         public string NomeComune { get; set; }
         public string NomeBotanico { get; set; }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SmartGarden2._0
 {
-    class SensorePressione
+    public class SensorePressione
     {
         public string Descrizione { get; set; }
         public Valvola ValvolaCentrale { get; set; }
