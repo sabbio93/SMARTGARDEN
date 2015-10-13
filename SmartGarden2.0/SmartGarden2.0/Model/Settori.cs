@@ -32,7 +32,7 @@ namespace SmartGarden2._0
             return sb.ToString();
         }
 
-        public Settore TrovaSettoreInLista(string nomeSettore)
+       /* public Settore TrovaSettoreInLista(string nomeSettore)
         {
             foreach(Settore settore in _listaSettori)
             {
@@ -41,7 +41,7 @@ namespace SmartGarden2._0
             }
 
             return null;
-        }
+        }*/
 
     }
 }
