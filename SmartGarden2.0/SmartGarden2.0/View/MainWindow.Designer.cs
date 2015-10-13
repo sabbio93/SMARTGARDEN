@@ -34,9 +34,9 @@
             this.toolStripMenuItem24 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem29 = new System.Windows.Forms.ToolStripMenuItem();
             this._statusStrip = new System.Windows.Forms.StatusStrip();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this._dateStatusBar = new System.Windows.Forms.ToolStripStatusLabel();
-            this._treeView = new SmartGarden2._0.View.TreeView();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this._treeView = new SmartGarden2._0.View.PannelloSinistra();
             this._pannelloDestra = new SmartGarden2._0.View.View1();
             this.menuStrip2.SuspendLayout();
             this._statusStrip.SuspendLayout();
@@ -96,6 +96,12 @@
             this._statusStrip.TabIndex = 1;
             this._statusStrip.Text = "statusStrip1";
             // 
+            // _dateStatusBar
+            // 
+            this._dateStatusBar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._dateStatusBar.Name = "_dateStatusBar";
+            this._dateStatusBar.Size = new System.Drawing.Size(0, 17);
+            // 
             // splitContainer2
             // 
             this.splitContainer2.BackColor = System.Drawing.SystemColors.Control;
@@ -111,14 +117,8 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this._pannelloDestra);
             this.splitContainer2.Size = new System.Drawing.Size(1264, 615);
-            this.splitContainer2.SplitterDistance = 316;
+            this.splitContainer2.SplitterDistance = 217;
             this.splitContainer2.TabIndex = 2;
-            // 
-            // _dateStatusBar
-            // 
-            this._dateStatusBar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._dateStatusBar.Name = "_dateStatusBar";
-            this._dateStatusBar.Size = new System.Drawing.Size(0, 17);
             // 
             // _treeView
             // 
@@ -127,7 +127,7 @@
             this._treeView.GestoreGiardino = null;
             this._treeView.Location = new System.Drawing.Point(0, 0);
             this._treeView.Name = "_treeView";
-            this._treeView.Size = new System.Drawing.Size(316, 615);
+            this._treeView.Size = new System.Drawing.Size(217, 615);
             this._treeView.TabIndex = 0;
             // 
             // _pannelloDestra
@@ -138,7 +138,7 @@
             this._pannelloDestra.GestoreGiardino = null;
             this._pannelloDestra.Location = new System.Drawing.Point(0, 0);
             this._pannelloDestra.Name = "_pannelloDestra";
-            this._pannelloDestra.Size = new System.Drawing.Size(944, 615);
+            this._pannelloDestra.Size = new System.Drawing.Size(1043, 615);
             this._pannelloDestra.TabIndex = 0;
             // 
             // MainWindow
@@ -203,7 +203,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem11;
         private System.Windows.Forms.StatusStrip _statusStrip;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private View.TreeView _treeView;
+        private View.PannelloSinistra _treeView;
         private View.View1 _pannelloDestra;
         private System.Windows.Forms.ToolStripStatusLabel _dateStatusBar;
     }

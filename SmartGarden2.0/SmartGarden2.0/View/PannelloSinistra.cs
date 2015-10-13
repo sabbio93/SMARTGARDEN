@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SmartGarden2._0.View
 {
-    public partial class TreeView : View
+    public partial class PannelloSinistra : View
     {
-        public TreeView()
+        public PannelloSinistra()
         {
             InitializeComponent();
         }
@@ -27,13 +27,15 @@ namespace SmartGarden2._0.View
             Giardino giardino = GestoreGiardino.Giardino;
 
             _treeView.BeginUpdate();
-            _treeView.Nodes.Add(giardino.Luogo);
+            _treeView.Nodes.Add("Giardino: " + giardino.Luogo);
             _treeView.EndUpdate();
 
-            /*foreach(Settore settore in giardino.Settori.ListaSettori)
+            foreach(Settore settore in giardino.Settori.ListaSettori)
             {
-                _treeView.selected
-            }*/
+                _treeView.Nodes[0].Nodes.Add(settore.Nome);
+            }
+
+            _treeView.ExpandAll();
         }
     }
 }

@@ -75,11 +75,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model\SensorePressione.cs" />
-    <Compile Include="View\TreeView.cs">
+    <Compile Include="View\PannelloSinistra.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\TreeView.Designer.cs">
-      <DependentUpon>TreeView.cs</DependentUpon>
+    <Compile Include="View\PannelloSinistra.Designer.cs">
+      <DependentUpon>PannelloSinistra.cs</DependentUpon>
     </Compile>
     <Compile Include="View\View.cs">
       <SubType>UserControl</SubType>
@@ -108,8 +108,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\TreeView.resx">
-      <DependentUpon>TreeView.cs</DependentUpon>
+    <EmbeddedResource Include="View\PannelloSinistra.resx">
+      <DependentUpon>PannelloSinistra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\View1.resx">
       <DependentUpon>View1.cs</DependentUpon>
