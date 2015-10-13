@@ -34,6 +34,7 @@
             // _treeView
             // 
             this._treeView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._treeView.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._treeView.Location = new System.Drawing.Point(0, 0);
             this._treeView.Name = "_treeView";
             this._treeView.Size = new System.Drawing.Size(232, 266);

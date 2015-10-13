@@ -7,7 +7,6 @@ namespace SmartGarden2._0
     {
         private Giardino _giardino;
         public event EventHandler Changed;
-        private IDisposable _unsubscriber;
 
         public GestioneGiardino()
         {
@@ -73,6 +72,11 @@ namespace SmartGarden2._0
         public void SettaTimer() {
             _timer.SetTimer(10000, 5000, "Settore Nord", _settore1.OpenMethodSettore, _settore1.CloseMethodSettore);
             _timer.SetTimer(2000, 10000, "TimerPrincipale", _giardino.Cisterna.SensorePressione.OpenMethodSensorePressione, _giardino.Cisterna.SensorePressione.CloseMethodSensorePressione);
+        }
+
+        public void CaricaTreeView()
+        {
+            //
         }
 
         public MyTimer MyTimer

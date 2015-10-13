@@ -33,5 +33,15 @@ namespace SmartGarden2._0.Control
         {
             _gestioneGiardino.ProvaCaricamentoInfo();
         }
+
+        internal void SettaTimer()
+        {
+            _gestioneGiardino.SettaTimer();
+        }
+
+        internal void CaricaTreeView()
+        {
+            _gestioneGiardino.CaricaTreeView();
+        }
     }
 }

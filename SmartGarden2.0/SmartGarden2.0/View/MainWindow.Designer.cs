@@ -33,10 +33,13 @@
             this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem24 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem29 = new System.Windows.Forms.ToolStripMenuItem();
+            this._statusStrip = new System.Windows.Forms.StatusStrip();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this._dateStatusBar = new System.Windows.Forms.ToolStripStatusLabel();
+            this._treeView = new SmartGarden2._0.View.TreeView();
             this._pannelloDestra = new SmartGarden2._0.View.View1();
-            this.treeView1 = new SmartGarden2._0.View.TreeView();
             this.menuStrip2.SuspendLayout();
+            this._statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -83,6 +86,16 @@
             this.toolStripMenuItem29.Size = new System.Drawing.Size(116, 22);
             this.toolStripMenuItem29.Text = "&About...";
             // 
+            // _statusStrip
+            // 
+            this._statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this._dateStatusBar});
+            this._statusStrip.Location = new System.Drawing.Point(0, 639);
+            this._statusStrip.Name = "_statusStrip";
+            this._statusStrip.Size = new System.Drawing.Size(1264, 22);
+            this._statusStrip.TabIndex = 1;
+            this._statusStrip.Text = "statusStrip1";
+            // 
             // splitContainer2
             // 
             this.splitContainer2.BackColor = System.Drawing.SystemColors.Control;
@@ -92,14 +105,30 @@
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.treeView1);
+            this.splitContainer2.Panel1.Controls.Add(this._treeView);
             // 
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this._pannelloDestra);
-            this.splitContainer2.Size = new System.Drawing.Size(1264, 637);
+            this.splitContainer2.Size = new System.Drawing.Size(1264, 615);
             this.splitContainer2.SplitterDistance = 316;
-            this.splitContainer2.TabIndex = 1;
+            this.splitContainer2.TabIndex = 2;
+            // 
+            // _dateStatusBar
+            // 
+            this._dateStatusBar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._dateStatusBar.Name = "_dateStatusBar";
+            this._dateStatusBar.Size = new System.Drawing.Size(0, 17);
+            // 
+            // _treeView
+            // 
+            this._treeView.Controller = null;
+            this._treeView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._treeView.GestoreGiardino = null;
+            this._treeView.Location = new System.Drawing.Point(0, 0);
+            this._treeView.Name = "_treeView";
+            this._treeView.Size = new System.Drawing.Size(316, 615);
+            this._treeView.TabIndex = 0;
             // 
             // _pannelloDestra
             // 
@@ -109,27 +138,22 @@
             this._pannelloDestra.GestoreGiardino = null;
             this._pannelloDestra.Location = new System.Drawing.Point(0, 0);
             this._pannelloDestra.Name = "_pannelloDestra";
-            this._pannelloDestra.Size = new System.Drawing.Size(944, 637);
+            this._pannelloDestra.Size = new System.Drawing.Size(944, 615);
             this._pannelloDestra.TabIndex = 0;
-            // 
-            // treeView1
-            // 
-            this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeView1.Location = new System.Drawing.Point(0, 0);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(316, 637);
-            this.treeView1.TabIndex = 0;
             // 
             // MainWindow
             // 
             this.ClientSize = new System.Drawing.Size(1264, 661);
             this.Controls.Add(this.splitContainer2);
+            this.Controls.Add(this._statusStrip);
             this.Controls.Add(this.menuStrip2);
             this.MinimumSize = new System.Drawing.Size(1280, 700);
             this.Name = "MainWindow";
             this.Text = "SmartGarden";
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
+            this._statusStrip.ResumeLayout(false);
+            this._statusStrip.PerformLayout();
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
@@ -175,10 +199,12 @@
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem24;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem29;
-        private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem11;
+        private System.Windows.Forms.StatusStrip _statusStrip;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private View.TreeView _treeView;
         private View.View1 _pannelloDestra;
-        private View.TreeView treeView1;
+        private System.Windows.Forms.ToolStripStatusLabel _dateStatusBar;
     }
 }

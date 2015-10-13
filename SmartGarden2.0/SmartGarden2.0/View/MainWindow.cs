@@ -25,10 +25,17 @@ namespace SmartGarden2._0
             
             _pannelloDestra.GestoreGiardino = gestoreGiardino; //set del model
             _pannelloDestra.Controller = controller; //set del controller
+            _treeView.GestoreGiardino = gestoreGiardino;
+            _treeView.Controller = controller;
 
-            gestoreGiardino.SettaTimer();
+            _dateStatusBar.Text = DateTime.Now.ToShortDateString();
+
+            controller.SettaTimer();
+
+            controller.CaricaTreeView();
 
             controller.CaricaInfoGiardino();
+
         }
 
         private void toolStripMenuItem11_Click(object sender, EventArgs e)
