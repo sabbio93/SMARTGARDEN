@@ -95,6 +95,7 @@
             // 
             // _pannelloDestra
             // 
+            this._pannelloDestra.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this._pannelloDestra.Controller = null;
             this._pannelloDestra.Dock = System.Windows.Forms.DockStyle.Fill;
             this._pannelloDestra.GestoreGiardino = null;

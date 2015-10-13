@@ -29,7 +29,7 @@ namespace SmartGarden2._0.Control
             }
         }
 
-        internal void CaricaSettori()
+        internal void CaricaInfoGiardino()
         {
             _gestioneGiardino.ProvaCaricamentoInfo();
         }

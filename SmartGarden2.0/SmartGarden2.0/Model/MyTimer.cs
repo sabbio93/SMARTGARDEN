@@ -1,20 +1,31 @@
 ﻿using System;
-using System.Reactive.Linq;
+using System.Collections.Generic;
+using System.Timers;
 
-namespace SmartGarden2._0
+namespace TimerAttivo
 {
     public class MyTimer
     {
-        public IObservable<long> GetTimerPerValvola(int seconds)
-        {
-            var timer = Observable.Timer(TimeSpan.FromSeconds(seconds));
-            return timer;
-        }
+        private Dictionary<String, Timer[]> _timers = new Dictionary<string, Timer[]>();
 
-        public IObservable<long> GetTimerIrrigazone(int seconds)
+        internal void SetTimerPerSettore(int momentoApertura, int durataApertura, String name,
+            ElapsedEventHandler Apri, ElapsedEventHandler Chiudi)
         {
-            var timer = Observable.Timer(TimeSpan.FromSeconds(seconds));
-            return timer;
+            Timer timerApertura = new System.Timers.Timer(momentoApertura);
+            Timer timerChiusura = new System.Timers.Timer(momentoApertura + durataApertura);
+
+            timerApertura.Elapsed += Apri;
+            timerChiusura.Elapsed += Chiudi;
+
+            timerApertura.Start();
+            timerChiusura.Start();
+            timerApertura.AutoReset = false;
+            timerChiusura.AutoReset = false;
+            Timer[] timerpervalvola = new Timer[2];
+            timerpervalvola[0] = timerApertura;
+            timerpervalvola[1] = timerChiusura;
+
+            _timers.Add(name, timerpervalvola);
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 
 namespace SmartGarden2._0
 {
@@ -47,11 +48,17 @@ namespace SmartGarden2._0
             set { _piante = value; }
         }
 
-        internal void setTimer(IObservable<long> timer)
+        #region EventiTimer
+        public ElapsedEventHandler getOpenMethodSettore()
         {
-            timer.Subscribe(_valvolaSettore);
+            return _valvolaSettore.Apri;
         }
 
-   
+        public ElapsedEventHandler getCloseMethodSettore()
+        {
+            return _valvolaSettore.Chiudi;
+        }
+        #endregion
+
     }
 }

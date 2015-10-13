@@ -9,6 +9,11 @@ namespace SmartGarden2._0.View
             InitializeComponent();
         }
 
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+        }
+
         protected override void OnModelChanged(object sender, EventArgs e)
         {
             //test
@@ -31,11 +36,6 @@ namespace SmartGarden2._0.View
                 _textBox.Text += "\r\nCaratteristiche cisterna: Portata=" + GestoreGiardino.Giardino.Cisterna.Portata + "; Capacità=" + GestoreGiardino.Giardino.Cisterna.Capienza;
 
             }
-        }
-
-        private void _caricaSettoriButton_Click(object sender, EventArgs e)
-        {
-            Controller.CaricaSettori();
         }
     }
 }

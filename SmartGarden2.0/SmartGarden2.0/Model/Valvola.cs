@@ -2,7 +2,7 @@
 
 namespace SmartGarden2._0
 {
-    public class Valvola : IObserver<long>
+    public class Valvola
     {
         private String _name;
         private IDisposable _unsubscriber;
@@ -19,29 +19,14 @@ namespace SmartGarden2._0
             }
         }
 
-        public virtual void Subscribe(IObservable<long> provider)
+        public void Apri(object sender, EventArgs e)
         {
-            _unsubscriber = provider.Subscribe(this);
+            Console.WriteLine("sono : " + _name + " mi apro");
         }
 
-        public virtual void Unsubscribe()
+        public void Chiudi(object sender, EventArgs e)
         {
-            _unsubscriber.Dispose();
-        }
-
-        public virtual void OnCompleted()
-        {
-            Console.WriteLine("La gestione della valvola non sarà più disponibile");
-        }
-
-        public virtual void OnError(Exception error)
-        {
-            // Do nothing.
-        }
-
-        public void OnNext(long value)
-        {
-            Console.WriteLine("Valvola " + _name + ": mi apro");
+            Console.WriteLine("sono : " + _name + " mi chiudo");
         }
     }
 }

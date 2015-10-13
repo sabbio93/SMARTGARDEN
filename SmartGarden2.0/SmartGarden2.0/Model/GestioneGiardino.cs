@@ -2,7 +2,7 @@
 
 namespace SmartGarden2._0
 {
-    public class GestioneGiardino : IObserver<long>
+    public class GestioneGiardino
     {
         private Giardino _giardino;
         public event EventHandler Changed;
@@ -18,36 +18,9 @@ namespace SmartGarden2._0
             if (Changed != null)
                 Changed(this, EventArgs.Empty); //aggiorna la view
         }
-        
-        public virtual void Subscribe(IObservable<long> provider)
-        {
-            _unsubscriber = provider.Subscribe(this);
-        }
-
-        public virtual void Unsubscribe()
-        {
-            _unsubscriber.Dispose();
-        }
-
-        public void OnNext(long value)
-        {
-            //inizio irrigazione
-        }
-
-        public void OnError(Exception error)
-        {
-           //nothing
-        }
-
-        public void OnCompleted()
-        {
-            //nothing
-        }
-
-
 
         //codice di prova
-        #region CodiceProva
+        #region CodiceProva 
 
         private double _temp, _prec;
 

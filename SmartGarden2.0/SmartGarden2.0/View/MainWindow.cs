@@ -25,7 +25,8 @@ namespace SmartGarden2._0
             
             _pannelloDestra.GestoreGiardino = gestoreGiardino; //set del model
             _pannelloDestra.Controller = controller; //set del controller
-            
+
+            controller.CaricaInfoGiardino();
         }
     }
 }
