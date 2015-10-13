@@ -117,7 +117,7 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this._pannelloDestra);
             this.splitContainer2.Size = new System.Drawing.Size(1264, 615);
-            this.splitContainer2.SplitterDistance = 217;
+            this.splitContainer2.SplitterDistance = 285;
             this.splitContainer2.TabIndex = 2;
             // 
             // _treeView
@@ -127,7 +127,7 @@
             this._treeView.GestoreGiardino = null;
             this._treeView.Location = new System.Drawing.Point(0, 0);
             this._treeView.Name = "_treeView";
-            this._treeView.Size = new System.Drawing.Size(217, 615);
+            this._treeView.Size = new System.Drawing.Size(285, 615);
             this._treeView.TabIndex = 0;
             // 
             // _pannelloDestra
@@ -138,7 +138,7 @@
             this._pannelloDestra.GestoreGiardino = null;
             this._pannelloDestra.Location = new System.Drawing.Point(0, 0);
             this._pannelloDestra.Name = "_pannelloDestra";
-            this._pannelloDestra.Size = new System.Drawing.Size(1043, 615);
+            this._pannelloDestra.Size = new System.Drawing.Size(975, 615);
             this._pannelloDestra.TabIndex = 0;
             // 
             // MainWindow

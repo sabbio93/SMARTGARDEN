@@ -34,9 +34,9 @@ namespace SmartGarden2._0.View
             foreach(Settore settore in giardino.Settori.ListaSettori)
             {
                 _treeView.Nodes[0].Nodes.Add(settore.Nome);
-                _treeView.Nodes[0].Nodes[index].Nodes.Add("Fabbisogno totale: " + settore.Piante.GetFabbisognoTotale());
+                _treeView.Nodes[0].Nodes[index].Nodes.Add("Fabbisogno totale giornaliero: " + settore.Piante.GetFabbisognoTotale() + " mm");
                 _treeView.Nodes[0].Nodes[index].Nodes.Add("Numero piante: " + settore.Piante.ListaPiante.Count);
-
+                
                 index++;
             }
 
