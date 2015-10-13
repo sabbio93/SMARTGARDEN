@@ -12,9 +12,9 @@ namespace SmartGarden2._0
         public double Capienza { get; set; }
         public SensorePressione SensorePressione{ get; set; }
 
-        public Cisterna(double portata, double capienza)
+        public Cisterna(double portata = 0, double capienza = 0) //argomenti opzionali
         {
-            if (portata <= 0 || capienza <= 0)
+            if (portata < 0 || capienza < 0)
                 throw new ArgumentException("Valore di portata o capienza non accettabile");
 
             Portata = portata;

@@ -11,6 +11,7 @@ namespace SmartGarden2._0.View
 
         protected override void OnModelChanged(object sender, EventArgs e)
         {
+            //test
             if (sender == GestoreGiardino)
             {
                 _textBox.Text += "Temperatura di domani, Modena: " + GestoreGiardino.Temperatura + "°C\r\n";
@@ -25,6 +26,8 @@ namespace SmartGarden2._0.View
                         _textBox.Text += "Piante presenti in settore " + s.Nome +": \r\n" + s.Piante.ToString();
                     }
                 }
+
+                _textBox.Text += "\r\nCaratteristiche cisterna: Portata=" + GestoreGiardino.Giardino.Cisterna.Portata + "; Capacità=" + GestoreGiardino.Giardino.Cisterna.Capienza;
 
             }
         }

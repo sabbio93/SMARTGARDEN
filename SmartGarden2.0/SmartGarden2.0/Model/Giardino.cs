@@ -15,7 +15,7 @@ namespace SmartGarden2._0
 
         public Giardino()
         {
-            _cisterna = new Cisterna(10.5, 20);
+            _cisterna = new Cisterna();
             _settori = new Settori();
         }
 
@@ -23,6 +23,11 @@ namespace SmartGarden2._0
         {
             get { return _settori; }
             set { _settori = value; }
+        }
+
+        public Cisterna Cisterna
+        {
+            get { return _cisterna; }
         }
     }
 }
