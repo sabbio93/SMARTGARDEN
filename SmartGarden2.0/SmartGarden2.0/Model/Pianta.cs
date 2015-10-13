@@ -39,6 +39,7 @@ namespace SmartGarden2._0
         {
             get { return _fabbisogni; }
         }
+        
 
     }
 }
