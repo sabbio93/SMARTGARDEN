@@ -31,7 +31,7 @@ namespace SmartGarden2._0.Control
 
         internal void CambiaViewSettore(string nomeSettore)
         {
-            //da fare
+            MessageBox.Show("cambia ok " + nomeSettore);
         }
 
         internal void CaricaInfoGiardino()

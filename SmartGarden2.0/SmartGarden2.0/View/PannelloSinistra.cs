@@ -25,7 +25,7 @@ namespace SmartGarden2._0.View
 
         private void ChangeSettore(object sender, TreeViewEventArgs e)
         {
-            if(e.Node.Level == 1)
+            if(e.Node.Level <= 1)
                 Controller.CambiaViewSettore(_treeView.SelectedNode.Text);
         }
 
