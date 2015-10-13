@@ -19,6 +19,7 @@ namespace TimerPassivo
         {
             MyTimer timer = new MyTimer();
 
+            
             Settore settore= new Settore();
             settore.Nome = "settore1";
         
