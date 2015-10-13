@@ -10,8 +10,9 @@ namespace SmartGarden2._0
 
         public GestioneGiardino()
         {
-            _giardino = new Giardino();
+            _giardino = new Giardino("Modena");
         }
+
         protected virtual void OnChanged()
         {
             if (Changed != null)

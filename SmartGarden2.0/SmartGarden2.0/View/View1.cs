@@ -19,6 +19,7 @@ namespace SmartGarden2._0.View
 
                 if(GestoreGiardino.Giardino.Settori != null)
                 {
+                    _textBox.Text += "Luogo giardino: " + GestoreGiardino.Giardino.Luogo;
                     _textBox.Text += "\r\nSettori di giardino: \r\n" + GestoreGiardino.Giardino.Settori.ToString() + "\r\n";
                     
                     foreach(Settore s in GestoreGiardino.Giardino.Settori.ListaSettori)

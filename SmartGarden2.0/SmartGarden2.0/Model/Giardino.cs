@@ -13,8 +13,9 @@ namespace SmartGarden2._0
         private Cisterna _cisterna;
         private Settori _settori;
 
-        public Giardino()
+        public Giardino(string luogo = null)
         {
+            Luogo = luogo;
             _cisterna = new Cisterna();
             _settori = new Settori();
         }

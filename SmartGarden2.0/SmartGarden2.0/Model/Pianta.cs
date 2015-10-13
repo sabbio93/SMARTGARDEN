@@ -9,16 +9,18 @@ namespace SmartGarden2._0
     {
         public string NomeComune { get; set; }
         public string NomeBotanico { get; set; }
+        public double Area { get; set; }
 
         private List<FabbisognoGiornalieroPeriodo> _fabbisogni;
 
-        public Pianta(string nomeComune, string nomeBotanico)
+        public Pianta(string nomeComune, string nomeBotanico, double area = 0)
         {
             if (string.IsNullOrWhiteSpace(nomeBotanico) || string.IsNullOrWhiteSpace(nomeComune))
                 throw new ArgumentNullException("Nome botanico o comune non accettabile");
 
             NomeBotanico = nomeBotanico;
             NomeComune = nomeComune;
+            Area = area;
             _fabbisogni = new List<FabbisognoGiornalieroPeriodo>();
         }
 
