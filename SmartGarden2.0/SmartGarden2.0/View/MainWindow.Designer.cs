@@ -35,8 +35,10 @@
             this.toolStripMenuItem29 = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this._pannelloDestra = new SmartGarden2._0.View.View1();
+            this.treeView1 = new SmartGarden2._0.View.TreeView();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.SuspendLayout();
@@ -48,7 +50,7 @@
             this.toolStripMenuItem24});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(483, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(1264, 24);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -65,6 +67,7 @@
             this.toolStripMenuItem11.Name = "toolStripMenuItem11";
             this.toolStripMenuItem11.Size = new System.Drawing.Size(92, 22);
             this.toolStripMenuItem11.Text = "E&xit";
+            this.toolStripMenuItem11.Click += new System.EventHandler(this.toolStripMenuItem11_Click);
             // 
             // toolStripMenuItem24
             // 
@@ -82,15 +85,20 @@
             // 
             // splitContainer2
             // 
+            this.splitContainer2.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.Location = new System.Drawing.Point(0, 24);
             this.splitContainer2.Name = "splitContainer2";
             // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.treeView1);
+            // 
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this._pannelloDestra);
-            this.splitContainer2.Size = new System.Drawing.Size(483, 307);
-            this.splitContainer2.SplitterDistance = 121;
+            this.splitContainer2.Size = new System.Drawing.Size(1264, 637);
+            this.splitContainer2.SplitterDistance = 316;
             this.splitContainer2.TabIndex = 1;
             // 
             // _pannelloDestra
@@ -101,18 +109,28 @@
             this._pannelloDestra.GestoreGiardino = null;
             this._pannelloDestra.Location = new System.Drawing.Point(0, 0);
             this._pannelloDestra.Name = "_pannelloDestra";
-            this._pannelloDestra.Size = new System.Drawing.Size(358, 307);
+            this._pannelloDestra.Size = new System.Drawing.Size(944, 637);
             this._pannelloDestra.TabIndex = 0;
+            // 
+            // treeView1
+            // 
+            this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeView1.Location = new System.Drawing.Point(0, 0);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(316, 637);
+            this.treeView1.TabIndex = 0;
             // 
             // MainWindow
             // 
-            this.ClientSize = new System.Drawing.Size(483, 331);
+            this.ClientSize = new System.Drawing.Size(1264, 661);
             this.Controls.Add(this.splitContainer2);
             this.Controls.Add(this.menuStrip2);
+            this.MinimumSize = new System.Drawing.Size(1280, 700);
             this.Name = "MainWindow";
             this.Text = "SmartGarden";
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
+            this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
@@ -161,5 +179,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem11;
         private View.View1 _pannelloDestra;
+        private View.TreeView treeView1;
     }
 }

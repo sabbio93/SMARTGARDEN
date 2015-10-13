@@ -27,12 +27,12 @@ namespace SmartGarden2._0
         #region EventiTimer
         public ElapsedEventHandler OpenMethodSensorePressione
         {
-            get { return ValvolaCentrale.Apri; }
+            get { return _valvolaCentrale.Apri; }
         }
 
         public ElapsedEventHandler CloseMethodSensorePressione
         {
-            get { return ValvolaCentrale.Chiudi; }
+            get { return _valvolaCentrale.Chiudi; }
         }
         #endregion
     }

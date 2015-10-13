@@ -30,5 +30,10 @@ namespace SmartGarden2._0
 
             controller.CaricaInfoGiardino();
         }
+
+        private void toolStripMenuItem11_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

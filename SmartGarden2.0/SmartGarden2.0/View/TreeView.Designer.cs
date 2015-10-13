@@ -1,6 +1,6 @@
 ﻿namespace SmartGarden2._0.View
 {
-    partial class View1
+    partial class TreeView
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,36 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this._textBox = new System.Windows.Forms.TextBox();
+            this._treeView = new System.Windows.Forms.TreeView();
             this.SuspendLayout();
             // 
-            // _textBox
+            // _treeView
             // 
-            this._textBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this._textBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._textBox.Location = new System.Drawing.Point(0, 0);
-            this._textBox.Multiline = true;
-            this._textBox.Name = "_textBox";
-            this._textBox.ReadOnly = true;
-            this._textBox.Size = new System.Drawing.Size(312, 312);
-            this._textBox.TabIndex = 0;
+            this._treeView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._treeView.Location = new System.Drawing.Point(0, 0);
+            this._treeView.Name = "_treeView";
+            this._treeView.Size = new System.Drawing.Size(232, 266);
+            this._treeView.TabIndex = 0;
             // 
-            // View1
+            // TreeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.Controls.Add(this._textBox);
-            this.Name = "View1";
-            this.Size = new System.Drawing.Size(312, 312);
+            this.Controls.Add(this._treeView);
+            this.Name = "TreeView";
+            this.Size = new System.Drawing.Size(232, 266);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox _textBox;
+        private System.Windows.Forms.TreeView _treeView;
     }
 }
