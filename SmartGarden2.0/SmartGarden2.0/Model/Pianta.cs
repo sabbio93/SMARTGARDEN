@@ -35,5 +35,10 @@ namespace SmartGarden2._0
             return 0;
         }
 
+        public List<FabbisognoGiornalieroPeriodo> FabbisogniPianta
+        {
+            get { return _fabbisogni; }
+        }
+
     }
 }

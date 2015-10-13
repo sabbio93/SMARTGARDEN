@@ -5,11 +5,16 @@ using System.Text;
 
 namespace SmartGarden2._0
 {
-    class FabbisognoGiornalieroPeriodo
+    public class FabbisognoGiornalieroPeriodo
     {
+        private DateTime _inizioPeriodo = new DateTime();
+        private DateTime _finePeriodo = new DateTime();
+        private double _fabbisognoAcquaGiornaliero = 0;
+
         public DateTime InizioPeriodo { get; set; }
         public DateTime FinePeriodo { get; set; }
         public double FabbisognoAcquaGiornaliero { get; set; }
+        
 
         public FabbisognoGiornalieroPeriodo(DateTime inizio, DateTime fine, double fabbisognoGiornaliero)
         {

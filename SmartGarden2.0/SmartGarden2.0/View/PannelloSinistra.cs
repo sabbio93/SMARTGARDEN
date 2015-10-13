@@ -20,6 +20,7 @@ namespace SmartGarden2._0.View
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
+            _treeView = new TreeView();
         }
 
         protected override void OnModelChanged(object sender, EventArgs e)
@@ -33,9 +34,23 @@ namespace SmartGarden2._0.View
             foreach(Settore settore in giardino.Settori.ListaSettori)
             {
                 _treeView.Nodes[0].Nodes.Add(settore.Nome);
+
             }
 
             _treeView.ExpandAll();
+            
+            foreach(TreeNode node in _treeView.Nodes[0].Nodes)
+            {
+                Settore settore = giardino.Settori.TrovaSettoreInLista(node.Name);
+                node.Nodes.Add("Fabbisogno totale: " + settore.Piante.GetFabbisognoTotale());
+                node.Nodes.Add("Numero piante: " + settore.Piante.ListaPiante.Count);
+            }
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

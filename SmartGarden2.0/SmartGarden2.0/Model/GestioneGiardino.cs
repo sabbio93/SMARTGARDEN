@@ -50,10 +50,16 @@ namespace SmartGarden2._0
             FornitoreInformazioniMeteo fornitoreTemp = new FornitoreTemperatura("Modena");
             _temp = fornitoreTemp.GetInformazione();
             _prec = fornitorePrec.GetInformazione();
-            
+
+            _pianta1.FabbisogniPianta.Add(new FabbisognoGiornalieroPeriodo(new DateTime(2015, 1, 1), new DateTime(2015, 12, 31), 40));
+            _pianta2.FabbisogniPianta.Add(new FabbisognoGiornalieroPeriodo(new DateTime(2015, 1, 1), new DateTime(2015, 6, 30), 20));
+            _pianta2.FabbisogniPianta.Add(new FabbisognoGiornalieroPeriodo(new DateTime(2015, 7, 1), new DateTime(2015, 12, 31), 100));
+
             _piante.ListaPiante.Add(_pianta1);
             _piante.ListaPiante.Add(_pianta2);
             _settore1.Piante = _piante;
+            _piante.ListaPiante.Remove(_pianta1);
+            _settore2.Piante = _piante;
             _settori.ListaSettori.Add(_settore1);
             _settori.ListaSettori.Add(_settore2);
             _giardino.Settori = _settori;
@@ -71,6 +77,7 @@ namespace SmartGarden2._0
 
         public void SettaTimer() {
             _timer.SetTimer(10000, 5000, "Settore Nord", _settore1.OpenMethodSettore, _settore1.CloseMethodSettore);
+            _timer.SetTimer(15000, 10000, "Settore Sud", _settore2.OpenMethodSettore, _settore2.CloseMethodSettore);
             _timer.SetTimer(2000, 10000, "TimerPrincipale", _giardino.Cisterna.SensorePressione.OpenMethodSensorePressione, _giardino.Cisterna.SensorePressione.CloseMethodSensorePressione);
         }
 
