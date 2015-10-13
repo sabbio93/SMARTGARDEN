@@ -1,4 +1,5 @@
 ﻿using System;
+using TimerAttivo;
 
 namespace SmartGarden2._0
 {
@@ -23,6 +24,8 @@ namespace SmartGarden2._0
         #region CodiceProva 
 
         private double _temp, _prec;
+
+        private MyTimer _timer = new MyTimer();
 
         public double Temperatura
         {
@@ -65,6 +68,16 @@ namespace SmartGarden2._0
         public Giardino Giardino
         {
             get { return _giardino; }
+        }
+
+        public void SettaTimer() {
+            _timer.SetTimer(10000, 5000, "Settore Nord", _settore1.OpenMethodSettore, _settore1.CloseMethodSettore);
+            _timer.SetTimer(2000, 10000, "TimerPrincipale", _giardino.Cisterna.SensorePressione.OpenMethodSensorePressione, _giardino.Cisterna.SensorePressione.CloseMethodSensorePressione);
+        }
+
+        public MyTimer MyTimer
+        {
+            get { return _timer; }
         }
         #endregion
     }

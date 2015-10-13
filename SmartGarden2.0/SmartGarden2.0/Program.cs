@@ -15,7 +15,6 @@ namespace SmartGarden2._0
         [STAThread]
         static void Main()
         {
-            MyTimer timer = new MyTimer();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainWindow());

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Timers;
 
 namespace SmartGarden2._0.View
 {
@@ -33,8 +35,17 @@ namespace SmartGarden2._0.View
                     }
                 }
 
-                _textBox.Text += "\r\nCaratteristiche cisterna: Portata=" + GestoreGiardino.Giardino.Cisterna.Portata + "; Capacità=" + GestoreGiardino.Giardino.Cisterna.Capienza;
+                _textBox.Text += "\r\nCaratteristiche cisterna: Portata=" + GestoreGiardino.Giardino.Cisterna.Portata + "; Capacità=" + GestoreGiardino.Giardino.Cisterna.Capienza + "\r\n";
 
+                foreach(string elemento in GestoreGiardino.MyTimer.Timers.Keys)
+                {
+                    _textBox.Text += "\r\nTimer " + elemento + ": ";
+
+                    foreach (Timer timer in GestoreGiardino.MyTimer.GetTimerForElement(elemento))
+                    {
+                        _textBox.Text += "\r\n" + timer.Interval;
+                    }
+                }
             }
         }
     }

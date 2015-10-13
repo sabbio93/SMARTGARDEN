@@ -8,9 +8,10 @@ namespace SmartGarden2._0
 {
     public class Cisterna
     {
+        private SensorePressione _sensorePressione;
+
         public double Portata { get; set; }
         public double Capienza { get; set; }
-        public SensorePressione SensorePressione{ get; set; }
 
         public Cisterna(double portata = 0, double capienza = 0) //argomenti opzionali
         {
@@ -19,6 +20,13 @@ namespace SmartGarden2._0
 
             Portata = portata;
             Capienza = capienza;
+            _sensorePressione = new SensorePressione();
+        }
+
+        public SensorePressione SensorePressione
+        {
+            get { return _sensorePressione; }
+            set{ _sensorePressione = value; }
         }
     }
 }

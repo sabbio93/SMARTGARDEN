@@ -49,14 +49,14 @@ namespace SmartGarden2._0
         }
 
         #region EventiTimer
-        public ElapsedEventHandler getOpenMethodSettore()
+        public ElapsedEventHandler OpenMethodSettore
         {
-            return _valvolaSettore.Apri;
+            get { return _valvolaSettore.Apri; }
         }
 
-        public ElapsedEventHandler getCloseMethodSettore()
+        public ElapsedEventHandler CloseMethodSettore
         {
-            return _valvolaSettore.Chiudi;
+            get { return _valvolaSettore.Chiudi; }
         }
         #endregion
 
