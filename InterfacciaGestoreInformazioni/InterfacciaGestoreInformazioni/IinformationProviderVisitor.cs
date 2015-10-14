@@ -1,0 +1,6 @@
+﻿namespace InterfacciaGestoreInformazioni
+{
+    interface IinformationProviderVisitor
+    {
+    }
+}
