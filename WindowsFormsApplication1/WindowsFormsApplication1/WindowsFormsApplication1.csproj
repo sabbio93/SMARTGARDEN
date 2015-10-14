@@ -55,11 +55,8 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Fornitori\Class1.cs" />
-    <Compile Include="Fornitori\Class2.cs" />
     <Compile Include="Fornitori\IinformationProvider.cs" />
     <Compile Include="GestoreInformazioni.cs" />
-    <Compile Include="Fornitori\Interface1.cs" />
     <Compile Include="IinformationProviderVisitor.cs" />
     <Compile Include="Pianta.cs" />
     <Compile Include="Program.cs" />

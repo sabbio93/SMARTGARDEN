@@ -8,6 +8,11 @@ namespace WindowsFormsApplication1
 {
     class StandardInformationVisitor : IinformationProviderVisitor
     {
+        public double GetRequiredWater()
+        {
+            return 0;
+        }
+
         public void Visit(dynamic informationProvider)
         {
             VisitSpecialization(informationProvider as dynamic);
@@ -17,6 +22,6 @@ namespace WindowsFormsApplication1
         {
             Console.WriteLine(informationProvider.Ciao);
         }
-
+        //TODO informazioni aggiuntive necessarie
     }
 }

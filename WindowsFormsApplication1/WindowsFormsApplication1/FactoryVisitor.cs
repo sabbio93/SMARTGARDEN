@@ -6,24 +6,32 @@ namespace WindowsFormsApplication1
     internal class FactoryVisitor
     {
 
-        Dictionary<Type, IinformationProviderVisitor> visitors;
+        Dictionary<Type, IinformationProviderVisitor> _visitors;
 
         public FactoryVisitor()
         {
-            visitors = new Dictionary<Type, IinformationProviderVisitor>();
+            _visitors = new Dictionary<Type, IinformationProviderVisitor>();
         }
+
         internal IinformationProviderVisitor GetVisitor(Type type)
         {
-           if(visitors.ContainsKey(type))
+           if(_visitors.ContainsKey(type))
             {
-                return visitors[type];
+                return _visitors[type];
             }
            else
             {
                 IinformationProviderVisitor _visitor = (IinformationProviderVisitor) Activator.CreateInstance(type);
-                visitors.Add(type, _visitor);
+                _visitors.Add(type, _visitor);
                  return _visitor;
             }
+        }
+
+        public List<IinformationProviderVisitor> GetVisitorsList()
+        {
+            List<IinformationProviderVisitor> list = new List<IinformationProviderVisitor>();
+            list.AddRange(_visitors.Values);
+            return list;
         }
     }
 }

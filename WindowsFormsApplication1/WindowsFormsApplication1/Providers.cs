@@ -10,14 +10,24 @@ namespace WindowsFormsApplication1
     class Providers
     {
         Dictionary<IinformationProvider, IinformationProviderVisitor> _providerList;
+        List<IinformationProviderVisitor> _visitorList; // visitor list would be obtainable from _providerList with iteration and comparison
+                                                        // is but it comes a gratis form factory and is much more efficient
         public Providers()
         {
             _providerList= new Dictionary<IinformationProvider, IinformationProviderVisitor>();
         }
 
-        private object GetVisByInformationProvider(IinformationProvider inf)
+        //TODO se metto il metodo della somma acqua qui elimino questo metodo e lavoro sulla lista
+        public List<IinformationProviderVisitor> Visitors
         {
-            return _providerList[inf];
+            get
+            {
+                return _visitorList;
+            }
+            set
+            {
+                _visitorList = value;
+            }
         }
 
         private bool HasInformationProvider(IinformationProvider inf)
@@ -27,16 +37,20 @@ namespace WindowsFormsApplication1
 
         internal double GetModifierRequirement(Pianta pianta)
         {
-            //TODO finish this method
+            double requiredWater=0;
+
             foreach(IinformationProvider prov in _providerList.Keys)
             {
                 prov.Accept(_providerList[prov]);
             }
-            //per ogni visitor prendo le informazioni 
-            //non devo prendere + volte le info dallo stesso visitor
-            //cambio struttura contenimento?
 
-            return 0;
+            foreach(IinformationProviderVisitor visitor in _visitorList)
+            {
+                requiredWater += visitor.GetRequiredWater();
+            }
+              
+
+            return requiredWater;
         }
 
         internal void add(IinformationProvider v1, IinformationProviderVisitor v2)
@@ -57,6 +71,7 @@ namespace WindowsFormsApplication1
             }
             return true;
         }
+
         public override int GetHashCode()
         {
             return base.GetHashCode();

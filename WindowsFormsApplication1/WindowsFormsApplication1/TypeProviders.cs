@@ -19,13 +19,15 @@ namespace WindowsFormsApplication1
 
         public Providers GetProviders()
         {
-            Providers _prov = new Providers();
+            Providers prov = new Providers();
             foreach(Type type in _providerList.Keys)
             {
-                _prov.add((IinformationProvider)Activator.CreateInstance(type), _factoryVisitor.GetVisitor(_providerList[type]));
+                prov.add((IinformationProvider)Activator.CreateInstance(type), _factoryVisitor.GetVisitor(_providerList[type]));
             }
 
-            return _prov;
+            prov.Visitors = _factoryVisitor.GetVisitorsList();
+            return prov;
         }
+
     }
 }
