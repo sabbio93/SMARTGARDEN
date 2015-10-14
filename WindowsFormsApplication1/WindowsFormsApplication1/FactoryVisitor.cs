@@ -5,6 +5,7 @@ namespace WindowsFormsApplication1
 {
     internal class FactoryVisitor
     {
+
         Dictionary<Type, IinformationProviderVisitor> visitors;
 
         public FactoryVisitor()

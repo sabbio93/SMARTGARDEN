@@ -9,11 +9,11 @@ namespace WindowsFormsApplication1
 {
     class TypeProviders
     {
-        Dictionary<Type, IinformationProviderVisitor> _providerList;
+        Dictionary<Type, Type> _providerList;
         FactoryVisitor _factoryVisitor;
         public TypeProviders()
         {
-            _providerList = new Dictionary<Type, IinformationProviderVisitor>();
+            _providerList = new Dictionary<Type, Type>();
             _factoryVisitor = new FactoryVisitor();
         }
 
@@ -22,7 +22,7 @@ namespace WindowsFormsApplication1
             Providers _prov = new Providers();
             foreach(Type type in _providerList.Keys)
             {
-                _prov.add((IinformationProvider)Activator.CreateInstance(type), _factoryVisitor.GetVisitor(type));
+                _prov.add((IinformationProvider)Activator.CreateInstance(type), _factoryVisitor.GetVisitor(_providerList[type]));
             }
 
             return _prov;
