@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1.Fornitori
 {
-    class Class2
+    interface IinformationProvider
     {
-        
+        void Accept(IinformationProviderVisitor visitor);
     }
 }

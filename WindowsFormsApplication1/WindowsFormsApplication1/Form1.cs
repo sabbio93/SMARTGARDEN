@@ -43,12 +43,8 @@ namespace WindowsFormsApplication1
                     isCorrectInterface(type)
                     select type;
 
-
-
             Type tipo = typeof(Interface1);
             // potrebbe essere meglio creare una classe che faccia il confronto
-
-           
 
             // methodClasse.GetParameters
             bool bol = typeof(Interface1).IsAssignableFrom(q.ToArray()[0]);
@@ -74,8 +70,10 @@ namespace WindowsFormsApplication1
 
         private void fine_Click(object sender, EventArgs e)
         {
-            List<Type> selected = checkedListBox1.CheckedItems.;
-            FactoryGetstoreInformazioni.getGestore(checkedListBox1.CheckedItems);
+            // List<Type> selected = checkedListBox1.CheckedItems;
+            Providers _providers = new Providers();
+
+             // FactoryGetstoreInformazioni.getGestore(_providers);
         }
     }
 }

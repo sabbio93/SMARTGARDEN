@@ -9,9 +9,26 @@ namespace WindowsFormsApplication1
 {
     class FactoryGetstoreInformazioni
     {
-        internal static void getGestore(CheckedListBox.CheckedItemCollection checkedItems)
+        private List<GestoreInformazioni> _gestori;
+
+        public FactoryGetstoreInformazioni()
         {
-            throw new NotImplementedException();
+            _gestori = new List<GestoreInformazioni>();
+        }
+        public GestoreInformazioni getGestore(Providers _providers)
+        {
+
+
+            foreach (GestoreInformazioni gest in _gestori)
+            {
+                if (gest.Providers.Equals(_providers))
+                    return gest;
+            }
+
+            GestoreInformazioni gestore = new GestoreInformazioni();
+            gestore.Providers = _providers;
+            _gestori.Add(gestore);
+            return gestore;
         }
     }
 }

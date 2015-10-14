@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApplication1.Fornitori
+namespace WindowsFormsApplication1
 {
-    class Class2
+    class Pianta
     {
-        
     }
 }
