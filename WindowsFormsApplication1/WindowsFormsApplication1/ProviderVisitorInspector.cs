@@ -10,12 +10,21 @@ namespace WindowsFormsApplication1
 {
     class ProviderVisitorInspector
     {
-        //TODO sarebbe meglio farlo diventare un flywight o un singleton
         //TODO vedere se ass esterno usa le classi esterne
         private readonly string @namespaceVisitor = "WindowsFormsApplication1.Fornitori";
         private readonly string @namespaceProvider = "WindowsFormsApplication1.Fornitori";
         private readonly Type interfaceVisitor = typeof(IinformationProviderVisitor);
         private readonly Type interfaceProvider = typeof(IinformationProvider);
+        private static ProviderVisitorInspector instance=null;
+
+        private ProviderVisitorInspector() { }
+       
+        public static ProviderVisitorInspector Get()
+        {
+            if (instance == null)
+                instance = new ProviderVisitorInspector();
+            return instance;
+        }
 
         public List<Type> GetListProvider()
         {
@@ -34,12 +43,6 @@ namespace WindowsFormsApplication1
                     && type.GetInterface(interf.Name) != null
                     select type;
             return q.ToList<Type>();
-        }
-
-        public bool IsGoodFile()
-        {
-            //TODO da completare magari non necessaria
-            return false;
         }
 
         public List<Type> GetVisitorFromFile( String fileName)
