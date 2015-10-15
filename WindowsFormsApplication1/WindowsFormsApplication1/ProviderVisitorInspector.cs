@@ -10,7 +10,8 @@ namespace WindowsFormsApplication1
 {
     class ProviderVisitorInspector
     {
-        //sarebbe meglio farlo diventare un flywight o un singleton
+        //TODO sarebbe meglio farlo diventare un flywight o un singleton
+        //TODO vedere se ass esterno usa le classi esterne
         private readonly string @namespaceVisitor = "WindowsFormsApplication1.Fornitori";
         private readonly string @namespaceProvider = "WindowsFormsApplication1.Fornitori";
         private readonly Type interfaceVisitor = typeof(IinformationProviderVisitor);
