@@ -12,6 +12,6 @@ namespace WindowsFormsApplication1
         //dynamic act like object in compile time
         void Visit(dynamic informationProvider);
 
-        double GetRequiredWater();
+        double GetRequiredWater(IPianta pianta);
     }
 }

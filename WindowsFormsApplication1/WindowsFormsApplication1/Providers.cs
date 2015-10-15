@@ -35,7 +35,7 @@ namespace WindowsFormsApplication1
             return _providerList.ContainsKey(inf);
         }
 
-        internal double GetModifierRequirement(Pianta pianta)
+        internal double GetModifierRequirement(IPianta pianta)
         {
             double requiredWater=0;
 
@@ -46,7 +46,7 @@ namespace WindowsFormsApplication1
 
             foreach(IinformationProviderVisitor visitor in _visitorList)
             {
-                requiredWater += visitor.GetRequiredWater();
+                requiredWater += visitor.GetRequiredWater(pianta);
             }
               
 

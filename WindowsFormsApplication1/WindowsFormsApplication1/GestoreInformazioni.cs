@@ -32,7 +32,7 @@
             return base.GetHashCode();
         }
 
-        public double GetModifierRequirement(Pianta pianta)
+        public double GetModifierRequirement(IPianta pianta)
         {
             return _providers.GetModifierRequirement(pianta);
         }
