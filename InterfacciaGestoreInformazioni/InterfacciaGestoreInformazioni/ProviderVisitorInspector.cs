@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using WindowsFormsApplication1.Fornitori;
+using WindowsFormsApplication1 ;
 
 namespace WindowsFormsApplication1
 {
