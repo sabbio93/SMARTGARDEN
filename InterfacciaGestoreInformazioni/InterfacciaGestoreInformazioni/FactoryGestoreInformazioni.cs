@@ -8,10 +8,11 @@ using System.Windows.Forms;
 namespace WindowsFormsApplication1
 {
     //TODO potrei metterlo insieme con TypeInspector
+    //prova
     class FactoryGestoreInformazioni
     {
         private List<GestoreInformazioni> _gestori;
-        private static FactoryGestoreInformazioni instance = null;
+        private static FactoryGestoreInformazioni _instance = null;
 
         private FactoryGestoreInformazioni()
         {
@@ -20,9 +21,9 @@ namespace WindowsFormsApplication1
 
         public static FactoryGestoreInformazioni GetFactory()
         {
-            if (instance == null)
-                instance = new FactoryGestoreInformazioni();
-            return instance;
+            if (_instance == null)
+                _instance = new FactoryGestoreInformazioni();
+            return _instance;
         }
 
         public GestoreInformazioni GetGestore(TypeProviders typeproviders)
