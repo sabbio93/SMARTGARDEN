@@ -11,12 +11,12 @@ using SmartGarden2._0.Control;
 
 namespace SmartGarden2._0.View
 {
-    public partial class View : UserControl
+    public partial class MainView : UserControl
     {
         private GestioneGiardino _gestoreGiardino;
         private Controller _controller;
 
-        public View()
+        public MainView()
         {
             InitializeComponent();
         }

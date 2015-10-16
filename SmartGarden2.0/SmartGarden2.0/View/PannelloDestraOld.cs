@@ -4,9 +4,9 @@ using System.Timers;
 
 namespace SmartGarden2._0.View
 {
-    public partial class View1 : View
+    public partial class PannelloDestraOld : MainView
     {
-        public View1()
+        public PannelloDestraOld()
         {
             InitializeComponent();
         }

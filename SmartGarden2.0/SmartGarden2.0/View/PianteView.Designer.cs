@@ -1,6 +1,6 @@
 ﻿namespace SmartGarden2._0.View
 {
-    partial class View1
+    partial class PianteView
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,36 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this._textBox = new System.Windows.Forms.TextBox();
+            this._listPianteView = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
-            // _textBox
+            // _listPianteView
             // 
-            this._textBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this._textBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._textBox.Location = new System.Drawing.Point(0, 0);
-            this._textBox.Multiline = true;
-            this._textBox.Name = "_textBox";
-            this._textBox.ReadOnly = true;
-            this._textBox.Size = new System.Drawing.Size(312, 312);
-            this._textBox.TabIndex = 0;
+            this._listPianteView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._listPianteView.Location = new System.Drawing.Point(0, 0);
+            this._listPianteView.Name = "_listPianteView";
+            this._listPianteView.Size = new System.Drawing.Size(300, 322);
+            this._listPianteView.TabIndex = 0;
+            this._listPianteView.UseCompatibleStateImageBehavior = false;
+            this._listPianteView.View = System.Windows.Forms.View.Details;
             // 
-            // View1
+            // PianteView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.Controls.Add(this._textBox);
-            this.Name = "View1";
-            this.Size = new System.Drawing.Size(312, 312);
+            this.Controls.Add(this._listPianteView);
+            this.Name = "PianteView";
+            this.Size = new System.Drawing.Size(300, 322);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox _textBox;
+        private System.Windows.Forms.ListView _listPianteView;
     }
 }

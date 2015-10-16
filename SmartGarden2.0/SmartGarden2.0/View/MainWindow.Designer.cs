@@ -36,8 +36,13 @@
             this._statusStrip = new System.Windows.Forms.StatusStrip();
             this._dateStatusBar = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.giardinoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aggiungiGiardinoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestisciGiardinoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestisciSettoriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._treeView = new SmartGarden2._0.View.PannelloSinistra();
-            this._pannelloDestra = new SmartGarden2._0.View.View1();
+            this._pannelloDestra = new SmartGarden2._0.View.PannelloDestra();
+            this.modificaCittàToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this._statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
@@ -50,6 +55,7 @@
             // 
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
+            this.giardinoToolStripMenuItem,
             this.toolStripMenuItem24});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
@@ -90,7 +96,7 @@
             // 
             this._statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._dateStatusBar});
-            this._statusStrip.Location = new System.Drawing.Point(0, 639);
+            this._statusStrip.Location = new System.Drawing.Point(0, 640);
             this._statusStrip.Name = "_statusStrip";
             this._statusStrip.Size = new System.Drawing.Size(1264, 22);
             this._statusStrip.TabIndex = 1;
@@ -116,38 +122,75 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this._pannelloDestra);
-            this.splitContainer2.Size = new System.Drawing.Size(1264, 615);
+            this.splitContainer2.Size = new System.Drawing.Size(1264, 616);
             this.splitContainer2.SplitterDistance = 285;
             this.splitContainer2.TabIndex = 2;
             // 
+            // giardinoToolStripMenuItem
+            // 
+            this.giardinoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aggiungiGiardinoToolStripMenuItem,
+            this.gestisciGiardinoToolStripMenuItem});
+            this.giardinoToolStripMenuItem.Name = "giardinoToolStripMenuItem";
+            this.giardinoToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.giardinoToolStripMenuItem.Text = "Giardino";
+            // 
+            // aggiungiGiardinoToolStripMenuItem
+            // 
+            this.aggiungiGiardinoToolStripMenuItem.Name = "aggiungiGiardinoToolStripMenuItem";
+            this.aggiungiGiardinoToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.aggiungiGiardinoToolStripMenuItem.Text = "Aggiungi giardino";
+            // 
+            // gestisciGiardinoToolStripMenuItem
+            // 
+            this.gestisciGiardinoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gestisciSettoriToolStripMenuItem,
+            this.modificaCittàToolStripMenuItem});
+            this.gestisciGiardinoToolStripMenuItem.Name = "gestisciGiardinoToolStripMenuItem";
+            this.gestisciGiardinoToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.gestisciGiardinoToolStripMenuItem.Text = "Gestisci giardino";
+            // 
+            // gestisciSettoriToolStripMenuItem
+            // 
+            this.gestisciSettoriToolStripMenuItem.Name = "gestisciSettoriToolStripMenuItem";
+            this.gestisciSettoriToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.gestisciSettoriToolStripMenuItem.Text = "Gestisci settori";
+            // 
             // _treeView
             // 
+            this._treeView.BackColor = System.Drawing.SystemColors.ControlLight;
             this._treeView.Controller = null;
             this._treeView.Dock = System.Windows.Forms.DockStyle.Fill;
             this._treeView.GestoreGiardino = null;
             this._treeView.Location = new System.Drawing.Point(0, 0);
             this._treeView.Name = "_treeView";
-            this._treeView.Size = new System.Drawing.Size(285, 615);
+            this._treeView.Size = new System.Drawing.Size(285, 616);
             this._treeView.TabIndex = 0;
             // 
             // _pannelloDestra
             // 
-            this._pannelloDestra.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this._pannelloDestra.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this._pannelloDestra.Controller = null;
             this._pannelloDestra.Dock = System.Windows.Forms.DockStyle.Fill;
             this._pannelloDestra.GestoreGiardino = null;
             this._pannelloDestra.Location = new System.Drawing.Point(0, 0);
             this._pannelloDestra.Name = "_pannelloDestra";
-            this._pannelloDestra.Size = new System.Drawing.Size(975, 615);
+            this._pannelloDestra.Size = new System.Drawing.Size(975, 616);
             this._pannelloDestra.TabIndex = 0;
+            // 
+            // modificaCittàToolStripMenuItem
+            // 
+            this.modificaCittàToolStripMenuItem.Name = "modificaCittàToolStripMenuItem";
+            this.modificaCittàToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.modificaCittàToolStripMenuItem.Text = "Modifica provincia";
             // 
             // MainWindow
             // 
-            this.ClientSize = new System.Drawing.Size(1264, 661);
+            this.ClientSize = new System.Drawing.Size(1264, 662);
             this.Controls.Add(this.splitContainer2);
             this.Controls.Add(this._statusStrip);
             this.Controls.Add(this.menuStrip2);
-            this.MinimumSize = new System.Drawing.Size(1280, 700);
+            this.MinimumSize = new System.Drawing.Size(1278, 700);
             this.Name = "MainWindow";
             this.Text = "SmartGarden";
             this.menuStrip2.ResumeLayout(false);
@@ -204,7 +247,12 @@
         private System.Windows.Forms.StatusStrip _statusStrip;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private View.PannelloSinistra _treeView;
-        private View.View1 _pannelloDestra;
         private System.Windows.Forms.ToolStripStatusLabel _dateStatusBar;
+        private View.PannelloDestra _pannelloDestra;
+        private System.Windows.Forms.ToolStripMenuItem giardinoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aggiungiGiardinoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestisciGiardinoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestisciSettoriToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificaCittàToolStripMenuItem;
     }
 }

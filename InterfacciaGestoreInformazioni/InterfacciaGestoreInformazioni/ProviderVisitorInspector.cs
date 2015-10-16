@@ -27,7 +27,7 @@ namespace WindowsFormsApplication1
             return GetListTypeAssociatedInterface(namespaceVisitor,interfaceVisitor);
         }
 
-        public List<Type> GetListTypeAssociatedInterface(String name,Type interf)
+        public List<Type> GetListTypeAssociatedInterface(string name,Type interf)
         {
             var q = from type in Assembly.GetExecutingAssembly().GetTypes()
                     where type.IsClass && type.Namespace == @name
@@ -42,17 +42,17 @@ namespace WindowsFormsApplication1
             return false;
         }
 
-        public List<Type> GetVisitorFromFile( String fileName)
+        public List<Type> GetVisitorFromFile(string fileName)
         {
             return GetTypeFromFile(fileName,interfaceVisitor);
         }
 
-        public List<Type> GetProviderFromFile(String fileName)
+        public List<Type> GetProviderFromFile(string fileName)
         {
             return GetTypeFromFile(fileName, interfaceProvider);
         }
 
-        private List<Type> GetTypeFromFile(String fileName,Type interf)
+        private List<Type> GetTypeFromFile(string fileName,Type interf)
         {
             var q = from type in Assembly.LoadFile(fileName).GetExportedTypes()
                     where type.IsClass && type.GetInterface(interf.Name) != null

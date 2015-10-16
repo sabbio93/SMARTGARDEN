@@ -1,6 +1,6 @@
 ﻿namespace SmartGarden2._0.View
 {
-    partial class View
+    partial class MainView
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,8 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // MainView
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "MainView";
+            this.Size = new System.Drawing.Size(587, 400);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

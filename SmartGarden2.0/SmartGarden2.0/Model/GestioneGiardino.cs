@@ -42,8 +42,8 @@ namespace SmartGarden2._0
         private Settore _settore2 = new Settore("Settore Sud");
         private Piante _piante1 = new Piante();
         private Piante _piante2 = new Piante();
-        private Pianta _pianta1 = new Pianta("Pomodoro", "EGhh efcds");
-        private Pianta _pianta2 = new Pianta("Lattuga", "GGhhf vvvvv");
+        private Pianta _pianta1 = new Pianta("Pomodoro", "Solanum lycopersicum");
+        private Pianta _pianta2 = new Pianta("Lattuga", "Lactuca sativa");
 
         public void ProvaCaricamentoInfo()
         {

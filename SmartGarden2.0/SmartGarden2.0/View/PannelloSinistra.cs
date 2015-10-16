@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace SmartGarden2._0.View
 {
-    public partial class PannelloSinistra : View
+    public partial class PannelloSinistra : MainView
     {
         public PannelloSinistra()
         {
@@ -25,7 +25,7 @@ namespace SmartGarden2._0.View
 
         private void ChangeSettore(object sender, TreeViewEventArgs e)
         {
-            if(e.Node.Level <= 1)
+            if(e.Node.Level == 1)
                 Controller.CambiaViewSettore(_treeView.SelectedNode.Text);
         }
 
@@ -40,7 +40,7 @@ namespace SmartGarden2._0.View
 
             foreach(Settore settore in giardino.Settori.ListaSettori)
             {
-                _treeView.Nodes[0].Nodes.Add("Settore: " + settore.Nome);
+                _treeView.Nodes[0].Nodes.Add(settore.Nome);
                 _treeView.Nodes[0].Nodes[index].Nodes.Add("Fabbisogno totale giornaliero: " + settore.Piante.GetFabbisognoTotale() + " mm");
                 _treeView.Nodes[0].Nodes[index].Nodes.Add("Numero piante: " + settore.Piante.ListaPiante.Count);
                 

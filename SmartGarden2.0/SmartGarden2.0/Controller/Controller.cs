@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using SmartGarden2._0.View;
+using System;
 using System.Windows.Forms;
 
 namespace SmartGarden2._0.Control
@@ -31,7 +33,18 @@ namespace SmartGarden2._0.Control
 
         internal void CambiaViewSettore(string nomeSettore)
         {
-            MessageBox.Show("cambia ok " + nomeSettore);
+
+            Settore settore = _gestioneGiardino.Giardino.Settori.TrovaSettore(nomeSettore);
+
+            using (var pianteForm = new Form())
+            {
+                PianteView pianteView = new PianteView(settore);
+                pianteView.Dock = DockStyle.Fill;
+                pianteForm.Text = "Piante del settore";
+                pianteForm.Size = new System.Drawing.Size(500,300);
+                pianteForm.Controls.Add(pianteView);
+                pianteForm.ShowDialog();
+            }
         }
 
         internal void CaricaInfoGiardino()
