@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1
 {
-    class Pianta
+    class Pianta : IPianta
+    {
+        GestoreInformazioni gest;
+       public Pianta()
+        {
+            gest = new GestoreInformazioni();
+        }
+    }
+
+    internal interface IPianta
     {
     }
 }

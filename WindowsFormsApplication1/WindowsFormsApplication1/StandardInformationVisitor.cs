@@ -8,7 +8,7 @@ namespace WindowsFormsApplication1
 {
     class StandardInformationVisitor : IinformationProviderVisitor
     {
-        public double GetRequiredWater()
+        public double GetRequiredWater(IPianta pianta)
         {
             return 0;
         }
@@ -22,6 +22,5 @@ namespace WindowsFormsApplication1
         {
             Console.WriteLine(informationProvider.Ciao);
         }
-        //TODO informazioni aggiuntive necessarie
     }
 }
