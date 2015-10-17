@@ -80,6 +80,7 @@
             this._dataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this._dataGridView.Location = new System.Drawing.Point(1, 0);
             this._dataGridView.Name = "_dataGridView";
+            this._dataGridView.ReadOnly = true;
             this._dataGridView.RowHeadersVisible = false;
             this._dataGridView.Size = new System.Drawing.Size(976, 508);
             this._dataGridView.TabIndex = 1;
@@ -89,6 +90,7 @@
             this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Id.HeaderText = "Id";
             this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
             this.Id.Width = 46;
             // 
             // NomeComune
@@ -96,6 +98,7 @@
             this.NomeComune.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.NomeComune.HeaderText = "Nome comune";
             this.NomeComune.Name = "NomeComune";
+            this.NomeComune.ReadOnly = true;
             // 
             // NomeBotanico
             // 
@@ -117,18 +120,21 @@
             this.Provider.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Provider.HeaderText = "Provider";
             this.Provider.Name = "Provider";
+            this.Provider.ReadOnly = true;
             // 
             // Visitor
             // 
             this.Visitor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Visitor.HeaderText = "Visitor";
             this.Visitor.Name = "Visitor";
+            this.Visitor.ReadOnly = true;
             // 
             // _confermaButton
             // 
             this._confermaButton.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this._confermaButton.HeaderText = "";
             this._confermaButton.Name = "_confermaButton";
+            this._confermaButton.ReadOnly = true;
             this._confermaButton.Text = "Conferma";
             this._confermaButton.Width = 5;
             // 
@@ -137,6 +143,7 @@
             this._mostraGestoriButton.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this._mostraGestoriButton.HeaderText = "";
             this._mostraGestoriButton.Name = "_mostraGestoriButton";
+            this._mostraGestoriButton.ReadOnly = true;
             this._mostraGestoriButton.Width = 5;
             // 
             // PianteView
