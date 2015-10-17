@@ -34,8 +34,6 @@
             this.giardinoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aggiungiGiardinoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestisciGiardinoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gestisciSettoriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificaCittàToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem24 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem29 = new System.Windows.Forms.ToolStripMenuItem();
             this._statusStrip = new System.Windows.Forms.StatusStrip();
@@ -43,6 +41,7 @@
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this._treeView = new SmartGarden.View.PannelloSinistra();
             this._pannelloDestra = new SmartGarden.View.PannelloDestra();
+            this.modificaTimerGeneraleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this._statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
@@ -82,7 +81,8 @@
             // 
             this.giardinoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aggiungiGiardinoToolStripMenuItem,
-            this.gestisciGiardinoToolStripMenuItem});
+            this.gestisciGiardinoToolStripMenuItem,
+            this.modificaTimerGeneraleToolStripMenuItem});
             this.giardinoToolStripMenuItem.Name = "giardinoToolStripMenuItem";
             this.giardinoToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.giardinoToolStripMenuItem.Text = "Giardino";
@@ -90,29 +90,14 @@
             // aggiungiGiardinoToolStripMenuItem
             // 
             this.aggiungiGiardinoToolStripMenuItem.Name = "aggiungiGiardinoToolStripMenuItem";
-            this.aggiungiGiardinoToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
-            this.aggiungiGiardinoToolStripMenuItem.Text = "Sostituisci giardino";
+            this.aggiungiGiardinoToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.aggiungiGiardinoToolStripMenuItem.Text = "Resetta giardino";
             // 
             // gestisciGiardinoToolStripMenuItem
             // 
-            this.gestisciGiardinoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gestisciSettoriToolStripMenuItem,
-            this.modificaCittàToolStripMenuItem});
             this.gestisciGiardinoToolStripMenuItem.Name = "gestisciGiardinoToolStripMenuItem";
-            this.gestisciGiardinoToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
-            this.gestisciGiardinoToolStripMenuItem.Text = "Gestisci giardino";
-            // 
-            // gestisciSettoriToolStripMenuItem
-            // 
-            this.gestisciSettoriToolStripMenuItem.Name = "gestisciSettoriToolStripMenuItem";
-            this.gestisciSettoriToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.gestisciSettoriToolStripMenuItem.Text = "Gestisci settori";
-            // 
-            // modificaCittàToolStripMenuItem
-            // 
-            this.modificaCittàToolStripMenuItem.Name = "modificaCittàToolStripMenuItem";
-            this.modificaCittàToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.modificaCittàToolStripMenuItem.Text = "Modifica provincia";
+            this.gestisciGiardinoToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.gestisciGiardinoToolStripMenuItem.Text = "Gestisci settori";
             // 
             // toolStripMenuItem24
             // 
@@ -186,6 +171,12 @@
             this._pannelloDestra.Size = new System.Drawing.Size(923, 616);
             this._pannelloDestra.TabIndex = 0;
             // 
+            // modificaTimerGeneraleToolStripMenuItem
+            // 
+            this.modificaTimerGeneraleToolStripMenuItem.Name = "modificaTimerGeneraleToolStripMenuItem";
+            this.modificaTimerGeneraleToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.modificaTimerGeneraleToolStripMenuItem.Text = "Modifica timer generale";
+            // 
             // MainWindow
             // 
             this.ClientSize = new System.Drawing.Size(1264, 662);
@@ -254,7 +245,6 @@
         private System.Windows.Forms.ToolStripMenuItem giardinoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aggiungiGiardinoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestisciGiardinoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gestisciSettoriToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificaCittàToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificaTimerGeneraleToolStripMenuItem;
     }
 }

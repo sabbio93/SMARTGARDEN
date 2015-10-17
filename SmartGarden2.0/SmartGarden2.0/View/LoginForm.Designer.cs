@@ -40,7 +40,7 @@
             // 
             // _panel
             // 
-            this._panel.BackColor = System.Drawing.SystemColors.Control;
+            this._panel.BackColor = System.Drawing.Color.Silver;
             this._panel.Controls.Add(this._username);
             this._panel.Controls.Add(this._resetButton);
             this._panel.Controls.Add(this._loginButton);
@@ -49,6 +49,8 @@
             this._panel.Controls.Add(this._passwordLabel);
             this._panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this._panel.Location = new System.Drawing.Point(0, 0);
+            this._panel.MaximumSize = new System.Drawing.Size(415, 191);
+            this._panel.MinimumSize = new System.Drawing.Size(415, 191);
             this._panel.Name = "_panel";
             this._panel.Size = new System.Drawing.Size(415, 191);
             this._panel.TabIndex = 0;
@@ -121,8 +123,11 @@
             this.AcceptButton = this._loginButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(415, 191);
             this.Controls.Add(this._panel);
+            this.MaximumSize = new System.Drawing.Size(431, 230);
+            this.MinimumSize = new System.Drawing.Size(431, 230);
             this.Name = "LoginForm";
             this.Text = "Login";
             this._panel.ResumeLayout(false);
