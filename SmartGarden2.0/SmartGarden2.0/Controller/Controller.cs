@@ -41,7 +41,7 @@ namespace SmartGarden2._0.Control
                 PianteView pianteView = new PianteView(settore);
                 pianteView.Dock = DockStyle.Fill;
                 pianteForm.Text = "Piante del settore";
-                pianteForm.Size = new System.Drawing.Size(500,300);
+                pianteForm.Size = new System.Drawing.Size(800,400);
                 pianteForm.Controls.Add(pianteView);
                 pianteForm.ShowDialog();
             }
