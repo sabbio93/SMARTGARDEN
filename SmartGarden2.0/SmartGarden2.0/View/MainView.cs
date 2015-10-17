@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SmartGarden2._0.Control;
+using SmartGarden.Control;
 
-namespace SmartGarden2._0.View
+namespace SmartGarden.View
 {
     public partial class MainView : UserControl
     {

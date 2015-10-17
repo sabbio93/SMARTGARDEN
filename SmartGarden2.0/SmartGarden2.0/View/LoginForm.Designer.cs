@@ -1,4 +1,4 @@
-﻿namespace SmartGarden2._0
+﻿namespace SmartGarden
 {
     partial class LoginForm
     {

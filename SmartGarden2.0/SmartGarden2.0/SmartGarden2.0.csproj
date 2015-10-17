@@ -46,6 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InterfacciaGestoriPROVA\FactoryGestoreInformazioni.cs" />
+    <Compile Include="InterfacciaGestoriPROVA\GestoreInformazioni.cs" />
+    <Compile Include="InterfacciaGestoriPROVA\IinformationProvider.cs" />
+    <Compile Include="InterfacciaGestoriPROVA\IinformationProviderVisitor.cs" />
+    <Compile Include="InterfacciaGestoriPROVA\Providers.cs" />
+    <Compile Include="InterfacciaGestoriPROVA\ProviderVisitorInspector.cs" />
+    <Compile Include="InterfacciaGestoriPROVA\TypeProviders.cs" />
     <Compile Include="Model\Cisterna.cs" />
     <Compile Include="Controller\Controller.cs" />
     <Compile Include="Model\FornitorePrecipitazioni.cs" />

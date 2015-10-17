@@ -1,4 +1,4 @@
-﻿namespace SmartGarden2._0.View
+﻿namespace SmartGarden.View
 {
     partial class MainView
     {

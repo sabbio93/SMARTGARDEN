@@ -1,8 +1,9 @@
-﻿using SmartGarden2._0.Control;
+﻿
+using SmartGarden.Control;
 using System;
 using System.Windows.Forms;
 
-namespace SmartGarden2._0
+namespace SmartGarden
 {
     public partial class MainWindow : Form
     {

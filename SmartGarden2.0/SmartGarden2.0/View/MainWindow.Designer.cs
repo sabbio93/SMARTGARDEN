@@ -1,4 +1,4 @@
-﻿namespace SmartGarden2._0
+﻿namespace SmartGarden
 {
     partial class MainWindow
     {
@@ -41,8 +41,8 @@
             this._statusStrip = new System.Windows.Forms.StatusStrip();
             this._dateStatusBar = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this._treeView = new SmartGarden2._0.View.PannelloSinistra();
-            this._pannelloDestra = new SmartGarden2._0.View.PannelloDestra();
+            this._treeView = new SmartGarden.View.PannelloSinistra();
+            this._pannelloDestra = new SmartGarden.View.PannelloDestra();
             this.menuStrip2.SuspendLayout();
             this._statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();

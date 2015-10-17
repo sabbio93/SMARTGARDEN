@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SmartGarden2._0.View
+namespace SmartGarden.View
 {
     public partial class PannelloSinistra : MainView
     {

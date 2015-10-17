@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using System.DirectoryServices.AccountManagement;
 
-namespace SmartGarden2._0
+namespace SmartGarden
 {
     public partial class LoginForm : Form
     {

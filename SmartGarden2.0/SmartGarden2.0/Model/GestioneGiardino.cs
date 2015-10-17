@@ -1,7 +1,7 @@
 ﻿using System;
 using TimerAttivo;
 
-namespace SmartGarden2._0
+namespace SmartGarden
 {
     public class GestioneGiardino
     {

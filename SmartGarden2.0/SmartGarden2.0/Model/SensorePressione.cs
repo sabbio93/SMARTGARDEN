@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Timers;
 
-namespace SmartGarden2._0
+namespace SmartGarden
 {
     public class SensorePressione
     {

@@ -1,9 +1,10 @@
 ﻿
-using SmartGarden2._0.View;
+
+using SmartGarden.View;
 using System;
 using System.Windows.Forms;
 
-namespace SmartGarden2._0.Control
+namespace SmartGarden.Control
 {
     public class Controller
     {
@@ -41,7 +42,7 @@ namespace SmartGarden2._0.Control
                 PianteView pianteView = new PianteView(settore);
                 pianteView.Dock = DockStyle.Fill;
                 pianteForm.Text = "Piante del settore";
-                pianteForm.Size = new System.Drawing.Size(800,400);
+                pianteForm.Size = new System.Drawing.Size(900,400);
                 pianteForm.Controls.Add(pianteView);
                 pianteForm.ShowDialog();
             }

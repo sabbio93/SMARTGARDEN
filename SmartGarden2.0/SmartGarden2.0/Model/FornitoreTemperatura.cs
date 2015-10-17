@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartGarden2._0
+namespace SmartGarden
 {
     class FornitoreTemperatura : FornitoreInformazioniMeteo
     {
