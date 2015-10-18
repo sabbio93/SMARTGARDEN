@@ -33,6 +33,8 @@
             this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
             this.giardinoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aggiungiGiardinoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificaCittàToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._provinceComboBox = new System.Windows.Forms.ToolStripComboBox();
             this.gestisciGiardinoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificaTimerGeneraleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem24 = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,10 +42,9 @@
             this._statusStrip = new System.Windows.Forms.StatusStrip();
             this._dateStatusBar = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.modificaCittàToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._treeView = new SmartGarden.View.PannelloSinistra();
             this._pannelloDestra = new SmartGarden.View.PannelloDestra();
-            this._provinceComboBox = new System.Windows.Forms.ToolStripComboBox();
+            this._resetToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this._statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
@@ -92,10 +93,24 @@
             // aggiungiGiardinoToolStripMenuItem
             // 
             this.aggiungiGiardinoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.modificaCittàToolStripMenuItem});
+            this.modificaCittàToolStripMenuItem,
+            this._resetToolStrip});
             this.aggiungiGiardinoToolStripMenuItem.Name = "aggiungiGiardinoToolStripMenuItem";
             this.aggiungiGiardinoToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.aggiungiGiardinoToolStripMenuItem.Text = "Modifica giardino";
+            // 
+            // modificaCittàToolStripMenuItem
+            // 
+            this.modificaCittàToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this._provinceComboBox});
+            this.modificaCittàToolStripMenuItem.Name = "modificaCittàToolStripMenuItem";
+            this.modificaCittàToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.modificaCittàToolStripMenuItem.Text = "Modifica provincia";
+            // 
+            // _provinceComboBox
+            // 
+            this._provinceComboBox.Name = "_provinceComboBox";
+            this._provinceComboBox.Size = new System.Drawing.Size(121, 23);
             // 
             // gestisciGiardinoToolStripMenuItem
             // 
@@ -159,15 +174,6 @@
             this.splitContainer2.SplitterDistance = 337;
             this.splitContainer2.TabIndex = 2;
             // 
-            // modificaCittàToolStripMenuItem
-            // 
-            this.modificaCittàToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this._provinceComboBox});
-            this.modificaCittàToolStripMenuItem.Name = "modificaCittàToolStripMenuItem";
-            this.modificaCittàToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.modificaCittàToolStripMenuItem.Text = "Modifica provincia";
-            //this.modificaCittàToolStripMenuItem.Click += new System.EventHandler(this.modificaCittàToolStripMenuItem_Click);
-            // 
             // _treeView
             // 
             this._treeView.BackColor = System.Drawing.Color.Silver;
@@ -190,10 +196,12 @@
             this._pannelloDestra.Size = new System.Drawing.Size(923, 616);
             this._pannelloDestra.TabIndex = 0;
             // 
-            // _provinceComboBox
+            // _resetToolStrip
             // 
-            this._provinceComboBox.Name = "_provinceComboBox";
-            this._provinceComboBox.Size = new System.Drawing.Size(121, 23);
+            this._resetToolStrip.Name = "_resetToolStrip";
+            this._resetToolStrip.Size = new System.Drawing.Size(173, 22);
+            this._resetToolStrip.Text = "Reset";
+            this._resetToolStrip.Click += new System.EventHandler(this._resetToolStrip_Click);
             // 
             // MainWindow
             // 
@@ -266,5 +274,6 @@
         private System.Windows.Forms.ToolStripMenuItem modificaTimerGeneraleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificaCittàToolStripMenuItem;
         private System.Windows.Forms.ToolStripComboBox _provinceComboBox;
+        private System.Windows.Forms.ToolStripMenuItem _resetToolStrip;
     }
 }

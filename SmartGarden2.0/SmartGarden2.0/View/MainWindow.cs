@@ -70,5 +70,15 @@ namespace SmartGarden
         {
             _controller.CambiaProvincia(_provinceComboBox.SelectedItem.ToString());
         }
+
+        private void _resetToolStrip_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Sei sicuro di voler procedere?", "Avviso", MessageBoxButtons.YesNo);
+
+            if(result == DialogResult.Yes)
+            {
+                //*TO DO* cancella giardino
+            }
+        }
     }
 }
