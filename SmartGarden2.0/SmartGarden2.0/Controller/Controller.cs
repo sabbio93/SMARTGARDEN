@@ -1,6 +1,7 @@
 ﻿
 
 using SmartGarden.View;
+using SmartGarden2._0.View;
 using System;
 using System.Windows.Forms;
 
@@ -46,6 +47,31 @@ namespace SmartGarden.Control
                 pianteForm.Controls.Add(pianteView);
                 pianteForm.ShowDialog();
             }
+        }
+
+        /*internal void ModificaCittà()
+        {
+
+            using (var modificaCittàForm = new Form())
+            {
+                CambiaProvinciaView cambiaCittàView = new CambiaProvinciaView();
+                cambiaCittàView.Dock = DockStyle.Fill;
+                modificaCittàForm.Text = "Modifica provincia";
+                modificaCittàForm.Size = new System.Drawing.Size(410, 210);
+                modificaCittàForm.Controls.Add(cambiaCittàView);
+                var result = modificaCittàForm.ShowDialog();
+
+                if(result == DialogResult.OK)
+                {
+                    _gestioneGiardino.Giardino.Luogo = cambiaCittàView.ProvinciaSelezionata;
+                }
+                
+            }
+        }*/
+
+       internal void CambiaProvincia(string provincia)
+        {
+
         }
 
         internal void CaricaInfoGiardino()

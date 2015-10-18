@@ -2,15 +2,18 @@
 using SmartGarden.Control;
 using System;
 using System.Windows.Forms;
+using System.Xml.XPath;
 
 namespace SmartGarden
 {
     public partial class MainWindow : Form
     {
+        private Controller _controller;
 
         public MainWindow()
         {
             InitializeComponent();
+            _provinceComboBox.SelectedIndexChanged += CambiaProvincia;
         }
 
         protected override void OnLoad(EventArgs e)
@@ -18,30 +21,59 @@ namespace SmartGarden
             base.OnLoad(e);
 
             GestioneGiardino gestoreGiardino = new GestioneGiardino();
-            Controller controller = new Controller(gestoreGiardino);
+            _controller = new Controller(gestoreGiardino);
 
-            bool loginOk = controller.CreateLoginForm();
+            bool loginOk = _controller.CreateLoginForm();
             if (!loginOk)
                 this.Close();
             
             _pannelloDestra.GestoreGiardino = gestoreGiardino; //set del model
-            _pannelloDestra.Controller = controller; //set del controller
+            _pannelloDestra.Controller = _controller; //set del controller
             _treeView.GestoreGiardino = gestoreGiardino;
-            _treeView.Controller = controller;
+            _treeView.Controller = _controller;
 
             _dateStatusBar.Text = DateTime.Now.ToShortDateString();
 
-            controller.SettaTimer();
+            _controller.SettaTimer();
 
-            controller.CaricaTreeView();
+            _controller.CaricaTreeView();
 
-            controller.CaricaInfoGiardino();
+            _controller.CaricaInfoGiardino();
+
+            CaricaProvince();
 
         }
 
         private void toolStripMenuItem11_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void modificaCittàToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.ModificaCittà();
+        }
+        
+        private void CaricaProvince()
+        {
+            XPathDocument doc = new XPathDocument("ProvinceItaliane.xml");
+            XPathNavigator nav = doc.CreateNavigator();
+
+            XPathExpression expr = nav.Compile("./italia/provincia");
+            XPathNodeIterator iterator = nav.Select(expr);
+
+
+            while (iterator.MoveNext())
+            {
+                _provinceComboBox.ComboBox.Items.Add(iterator.Current.Value);
+            }
+        }
+
+
+        private void CambiaProvincia(object sender, EventArgs e)
+        {
+            MessageBox.Show(_provinceComboBox.SelectedText);
+            _controller.CambiaProvincia(_provinceComboBox.SelectedText);
         }
     }
 }
