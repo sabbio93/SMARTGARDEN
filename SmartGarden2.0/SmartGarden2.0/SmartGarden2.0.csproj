@@ -65,12 +65,6 @@
     <Compile Include="Model\Settori.cs" />
     <Compile Include="Model\Valvola.cs" />
     <Compile Include="Model\Settore.cs" />
-    <Compile Include="View\CambiaProvinciaView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\CambiaProvinciaView.Designer.cs">
-      <DependentUpon>CambiaProvinciaView.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\PannelloDestra.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -118,9 +112,6 @@
     <Compile Include="View\PianteView.Designer.cs">
       <DependentUpon>PianteView.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\CambiaProvinciaView.resx">
-      <DependentUpon>CambiaProvinciaView.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>

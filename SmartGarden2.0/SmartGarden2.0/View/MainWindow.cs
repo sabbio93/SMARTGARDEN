@@ -48,11 +48,7 @@ namespace SmartGarden
         {
             this.Close();
         }
-
-        private void modificaCittàToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            _controller.ModificaCittà();
-        }
+        
         
         private void CaricaProvince()
         {
@@ -72,8 +68,7 @@ namespace SmartGarden
 
         private void CambiaProvincia(object sender, EventArgs e)
         {
-            MessageBox.Show(_provinceComboBox.SelectedText);
-            _controller.CambiaProvincia(_provinceComboBox.SelectedText);
+            _controller.CambiaProvincia(_provinceComboBox.SelectedItem.ToString());
         }
     }
 }

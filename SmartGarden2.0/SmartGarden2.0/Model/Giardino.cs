@@ -8,22 +8,45 @@ namespace SmartGarden
 {
     public class Giardino
     {
-        public string Luogo { get; set; }
+        public event EventHandler Changed;
 
         private Cisterna _cisterna;
         private Settori _settori;
+        private string _luogo;
 
         public Giardino(string luogo = null)
         {
-            Luogo = luogo;
+            _luogo = luogo;
             _cisterna = new Cisterna();
             _settori = new Settori();
         }
 
+        protected virtual void OnChanged()
+        {
+            if (Changed != null)
+                Changed(this, EventArgs.Empty); //aggiorna la view
+        }
+
+
         public Settori Settori
         {
             get { return _settori; }
-            set { _settori = value; }
+            set
+            {
+                _settori = value;
+                OnChanged();
+            }
+        }
+
+
+        public string Luogo
+        {
+            get { return _luogo; }
+            set
+            {
+                _luogo = value;
+                OnChanged();
+            }
         }
 
         public Cisterna Cisterna

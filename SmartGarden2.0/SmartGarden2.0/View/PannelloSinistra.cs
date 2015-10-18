@@ -31,6 +31,8 @@ namespace SmartGarden.View
 
         protected override void OnModelChanged(object sender, EventArgs e)
         {
+            _treeView.Nodes.Clear(); //cancello il treeview già esistente per ricrearne uno aggiornato
+
             Giardino giardino = GestoreGiardino.Giardino;
             int index = 0;
 

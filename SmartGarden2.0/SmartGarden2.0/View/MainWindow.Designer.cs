@@ -166,7 +166,7 @@
             this.modificaCittàToolStripMenuItem.Name = "modificaCittàToolStripMenuItem";
             this.modificaCittàToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.modificaCittàToolStripMenuItem.Text = "Modifica provincia";
-            this.modificaCittàToolStripMenuItem.Click += new System.EventHandler(this.modificaCittàToolStripMenuItem_Click);
+            //this.modificaCittàToolStripMenuItem.Click += new System.EventHandler(this.modificaCittàToolStripMenuItem_Click);
             // 
             // _treeView
             // 
