@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SmartGarden")]
+[assembly: AssemblyTitle("WindowsFormsApplication2")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SmartGarden")]
+[assembly: AssemblyProduct("WindowsFormsApplication2")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("6a3a5f51-5881-41ea-88f5-7c6a9c6307ec")]
+[assembly: Guid("2ac8bb62-b8bf-4b30-b94c-d8d6fd992b01")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
-    public class Class1 : Interface1
+    class Salutatore
     {
-        public string saluta()
+        public String hello()
         {
-            Salutatore sal = new Salutatore();
-            return "sono bello"+sal.hello();
+            return "sono lontanto ma siamo parenti";
         }
-
-        
     }
 }

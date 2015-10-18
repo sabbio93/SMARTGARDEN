@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication1
+﻿namespace SmartGarden
 {
     class GestoreInformazioni
     {
@@ -32,9 +32,14 @@
             return base.GetHashCode();
         }
 
-        public double GetModifierRequirement(IPianta pianta)
+        public double GetModifierRequirement(IDataPianta pianta)
         {
             return _providers.GetModifierRequirement(pianta);
+        }
+
+        public TypeProviders GetTypeProviders()
+        {
+            return TypeProviders.GetTypeProvidersFromProviders(_providers);
         }
     }
 }

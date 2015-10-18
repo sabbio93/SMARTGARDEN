@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApplication1 
+namespace SmartGarden 
 {
     class StandardInformationVisitor : IinformationProviderVisitor
     {
-        public double GetRequiredWater(IPianta pianta)
+        public double GetRequiredWater(IDataPianta pianta)
         {
             return 0;
         }
