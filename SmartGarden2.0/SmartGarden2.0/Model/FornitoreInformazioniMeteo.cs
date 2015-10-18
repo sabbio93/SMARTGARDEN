@@ -2,7 +2,7 @@
 using System.Xml;
 using System.Xml.XPath;
 
-namespace SmartGarden2._0
+namespace SmartGarden
 {
     abstract class FornitoreInformazioniMeteo
     {

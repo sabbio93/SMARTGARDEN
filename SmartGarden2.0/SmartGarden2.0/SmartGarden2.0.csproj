@@ -46,6 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InterfacciaGestoriPROVA\FactoryGestoreInformazioni.cs" />
+    <Compile Include="InterfacciaGestoriPROVA\GestoreInformazioni.cs" />
+    <Compile Include="InterfacciaGestoriPROVA\IinformationProvider.cs" />
+    <Compile Include="InterfacciaGestoriPROVA\IinformationProviderVisitor.cs" />
+    <Compile Include="InterfacciaGestoriPROVA\Providers.cs" />
+    <Compile Include="InterfacciaGestoriPROVA\ProviderVisitorInspector.cs" />
+    <Compile Include="InterfacciaGestoriPROVA\TypeProviders.cs" />
     <Compile Include="Model\Cisterna.cs" />
     <Compile Include="Controller\Controller.cs" />
     <Compile Include="Model\FornitorePrecipitazioni.cs" />
@@ -58,6 +65,18 @@
     <Compile Include="Model\Settori.cs" />
     <Compile Include="Model\Valvola.cs" />
     <Compile Include="Model\Settore.cs" />
+    <Compile Include="View\PannelloDestra.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\PannelloDestra.Designer.cs">
+      <DependentUpon>PannelloDestra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PianteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PianteForm.Designer.cs">
+      <DependentUpon>PianteForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,18 +100,27 @@
     <Compile Include="View\PannelloSinistra.Designer.cs">
       <DependentUpon>PannelloSinistra.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\View.cs">
+    <Compile Include="View\MainView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\View.Designer.cs">
-      <DependentUpon>View.cs</DependentUpon>
+    <Compile Include="View\MainView.Designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\View1.cs">
+    <Compile Include="View\PianteView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\View1.Designer.cs">
-      <DependentUpon>View1.cs</DependentUpon>
+    <Compile Include="View\PianteView.Designer.cs">
+      <DependentUpon>PianteView.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PannelloDestra.resx">
+      <DependentUpon>PannelloDestra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PianteForm.resx">
+      <DependentUpon>PianteForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,8 +139,8 @@
     <EmbeddedResource Include="View\PannelloSinistra.resx">
       <DependentUpon>PannelloSinistra.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\View1.resx">
-      <DependentUpon>View1.cs</DependentUpon>
+    <EmbeddedResource Include="View\PianteView.resx">
+      <DependentUpon>PianteView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
 
-namespace SmartGarden2._0
+namespace SmartGarden
 {
     public class Settore
     {

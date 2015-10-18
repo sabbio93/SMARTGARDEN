@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartGarden2._0
+namespace SmartGarden
 {
     public class Settori
     {
@@ -32,7 +32,7 @@ namespace SmartGarden2._0
             return sb.ToString();
         }
 
-       /* public Settore TrovaSettoreInLista(string nomeSettore)
+        public Settore TrovaSettore(string nomeSettore)
         {
             foreach(Settore settore in _listaSettori)
             {
@@ -41,7 +41,19 @@ namespace SmartGarden2._0
             }
 
             return null;
-        }*/
+        }
+
+        public int NumeroPianteTotali()
+        {
+            int num = 0;
+
+            foreach (Settore s in _listaSettori)
+            {
+                num += s.Piante.ListaPiante.Count;
+            }
+
+            return num;
+        }
 
     }
 }

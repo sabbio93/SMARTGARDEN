@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SmartGarden2._0.Properties
+namespace SmartGarden.Properties
 {
 
 

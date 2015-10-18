@@ -1,7 +1,9 @@
-﻿using System;
+﻿
+using SmartGarden.View;
+using System;
 using System.Windows.Forms;
 
-namespace SmartGarden2._0.Control
+namespace SmartGarden.Control
 {
     public class Controller
     {
@@ -31,7 +33,24 @@ namespace SmartGarden2._0.Control
 
         internal void CambiaViewSettore(string nomeSettore)
         {
-            MessageBox.Show("cambia ok " + nomeSettore);
+
+            Settore settore = _gestioneGiardino.Giardino.Settori.TrovaSettore(nomeSettore);
+
+            using (var pianteForm = new Form())
+            {
+                PianteView pianteView = new PianteView(settore);
+                pianteView.Dock = DockStyle.Fill;
+                pianteForm.Text = "Piante di " + settore.Nome;
+                pianteForm.Size = new System.Drawing.Size(1000,400);
+                pianteForm.Controls.Add(pianteView);
+                pianteForm.ShowDialog();
+            }
+        }
+
+       internal void CambiaProvincia(string provincia)
+        {
+            _gestioneGiardino.Giardino.Luogo = provincia;
+            //*TO DO* aggiornare il meteo in base alla provincia
         }
 
         internal void CaricaInfoGiardino()

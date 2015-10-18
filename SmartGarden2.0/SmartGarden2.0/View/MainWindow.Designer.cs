@@ -1,4 +1,4 @@
-﻿namespace SmartGarden2._0
+﻿namespace SmartGarden
 {
     partial class MainWindow
     {
@@ -31,13 +31,20 @@
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
+            this.giardinoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aggiungiGiardinoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificaCittàToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._provinceComboBox = new System.Windows.Forms.ToolStripComboBox();
+            this.gestisciGiardinoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificaTimerGeneraleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem24 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem29 = new System.Windows.Forms.ToolStripMenuItem();
             this._statusStrip = new System.Windows.Forms.StatusStrip();
             this._dateStatusBar = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this._treeView = new SmartGarden2._0.View.PannelloSinistra();
-            this._pannelloDestra = new SmartGarden2._0.View.View1();
+            this._treeView = new SmartGarden.View.PannelloSinistra();
+            this._pannelloDestra = new SmartGarden.View.PannelloDestra();
+            this._resetToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this._statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
@@ -50,6 +57,7 @@
             // 
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
+            this.giardinoToolStripMenuItem,
             this.toolStripMenuItem24});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
@@ -72,6 +80,50 @@
             this.toolStripMenuItem11.Text = "E&xit";
             this.toolStripMenuItem11.Click += new System.EventHandler(this.toolStripMenuItem11_Click);
             // 
+            // giardinoToolStripMenuItem
+            // 
+            this.giardinoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aggiungiGiardinoToolStripMenuItem,
+            this.gestisciGiardinoToolStripMenuItem,
+            this.modificaTimerGeneraleToolStripMenuItem});
+            this.giardinoToolStripMenuItem.Name = "giardinoToolStripMenuItem";
+            this.giardinoToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.giardinoToolStripMenuItem.Text = "Giardino";
+            // 
+            // aggiungiGiardinoToolStripMenuItem
+            // 
+            this.aggiungiGiardinoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.modificaCittàToolStripMenuItem,
+            this._resetToolStrip});
+            this.aggiungiGiardinoToolStripMenuItem.Name = "aggiungiGiardinoToolStripMenuItem";
+            this.aggiungiGiardinoToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.aggiungiGiardinoToolStripMenuItem.Text = "Modifica giardino";
+            // 
+            // modificaCittàToolStripMenuItem
+            // 
+            this.modificaCittàToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this._provinceComboBox});
+            this.modificaCittàToolStripMenuItem.Name = "modificaCittàToolStripMenuItem";
+            this.modificaCittàToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.modificaCittàToolStripMenuItem.Text = "Modifica provincia";
+            // 
+            // _provinceComboBox
+            // 
+            this._provinceComboBox.Name = "_provinceComboBox";
+            this._provinceComboBox.Size = new System.Drawing.Size(121, 23);
+            // 
+            // gestisciGiardinoToolStripMenuItem
+            // 
+            this.gestisciGiardinoToolStripMenuItem.Name = "gestisciGiardinoToolStripMenuItem";
+            this.gestisciGiardinoToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.gestisciGiardinoToolStripMenuItem.Text = "Gestisci settori";
+            // 
+            // modificaTimerGeneraleToolStripMenuItem
+            // 
+            this.modificaTimerGeneraleToolStripMenuItem.Name = "modificaTimerGeneraleToolStripMenuItem";
+            this.modificaTimerGeneraleToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.modificaTimerGeneraleToolStripMenuItem.Text = "Modifica timer generale";
+            // 
             // toolStripMenuItem24
             // 
             this.toolStripMenuItem24.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -90,7 +142,7 @@
             // 
             this._statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._dateStatusBar});
-            this._statusStrip.Location = new System.Drawing.Point(0, 639);
+            this._statusStrip.Location = new System.Drawing.Point(0, 640);
             this._statusStrip.Name = "_statusStrip";
             this._statusStrip.Size = new System.Drawing.Size(1264, 22);
             this._statusStrip.TabIndex = 1;
@@ -104,50 +156,60 @@
             // 
             // splitContainer2
             // 
-            this.splitContainer2.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer2.BackColor = System.Drawing.Color.Silver;
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.Location = new System.Drawing.Point(0, 24);
             this.splitContainer2.Name = "splitContainer2";
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.BackColor = System.Drawing.Color.Silver;
             this.splitContainer2.Panel1.Controls.Add(this._treeView);
             // 
             // splitContainer2.Panel2
             // 
+            this.splitContainer2.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.splitContainer2.Panel2.Controls.Add(this._pannelloDestra);
-            this.splitContainer2.Size = new System.Drawing.Size(1264, 615);
-            this.splitContainer2.SplitterDistance = 285;
+            this.splitContainer2.Size = new System.Drawing.Size(1264, 616);
+            this.splitContainer2.SplitterDistance = 337;
             this.splitContainer2.TabIndex = 2;
             // 
             // _treeView
             // 
+            this._treeView.BackColor = System.Drawing.Color.Silver;
             this._treeView.Controller = null;
             this._treeView.Dock = System.Windows.Forms.DockStyle.Fill;
             this._treeView.GestoreGiardino = null;
             this._treeView.Location = new System.Drawing.Point(0, 0);
             this._treeView.Name = "_treeView";
-            this._treeView.Size = new System.Drawing.Size(285, 615);
+            this._treeView.Size = new System.Drawing.Size(337, 616);
             this._treeView.TabIndex = 0;
             // 
             // _pannelloDestra
             // 
-            this._pannelloDestra.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this._pannelloDestra.BackColor = System.Drawing.Color.DimGray;
             this._pannelloDestra.Controller = null;
             this._pannelloDestra.Dock = System.Windows.Forms.DockStyle.Fill;
             this._pannelloDestra.GestoreGiardino = null;
             this._pannelloDestra.Location = new System.Drawing.Point(0, 0);
             this._pannelloDestra.Name = "_pannelloDestra";
-            this._pannelloDestra.Size = new System.Drawing.Size(975, 615);
+            this._pannelloDestra.Size = new System.Drawing.Size(923, 616);
             this._pannelloDestra.TabIndex = 0;
+            // 
+            // _resetToolStrip
+            // 
+            this._resetToolStrip.Name = "_resetToolStrip";
+            this._resetToolStrip.Size = new System.Drawing.Size(173, 22);
+            this._resetToolStrip.Text = "Reset";
+            this._resetToolStrip.Click += new System.EventHandler(this._resetToolStrip_Click);
             // 
             // MainWindow
             // 
-            this.ClientSize = new System.Drawing.Size(1264, 661);
+            this.ClientSize = new System.Drawing.Size(1264, 662);
             this.Controls.Add(this.splitContainer2);
             this.Controls.Add(this._statusStrip);
             this.Controls.Add(this.menuStrip2);
-            this.MinimumSize = new System.Drawing.Size(1280, 700);
+            this.MinimumSize = new System.Drawing.Size(1278, 700);
             this.Name = "MainWindow";
             this.Text = "SmartGarden";
             this.menuStrip2.ResumeLayout(false);
@@ -204,7 +266,14 @@
         private System.Windows.Forms.StatusStrip _statusStrip;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private View.PannelloSinistra _treeView;
-        private View.View1 _pannelloDestra;
         private System.Windows.Forms.ToolStripStatusLabel _dateStatusBar;
+        private View.PannelloDestra _pannelloDestra;
+        private System.Windows.Forms.ToolStripMenuItem giardinoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aggiungiGiardinoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestisciGiardinoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificaTimerGeneraleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificaCittàToolStripMenuItem;
+        private System.Windows.Forms.ToolStripComboBox _provinceComboBox;
+        private System.Windows.Forms.ToolStripMenuItem _resetToolStrip;
     }
 }

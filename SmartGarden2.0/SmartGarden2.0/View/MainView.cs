@@ -7,16 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SmartGarden2._0.Control;
+using SmartGarden.Control;
 
-namespace SmartGarden2._0.View
+namespace SmartGarden.View
 {
-    public partial class View : UserControl
+    public partial class MainView : UserControl
     {
         private GestioneGiardino _gestoreGiardino;
         private Controller _controller;
 
-        public View()
+        public MainView()
         {
             InitializeComponent();
         }
@@ -37,6 +37,7 @@ namespace SmartGarden2._0.View
                     if (_gestoreGiardino != null)
                     {
                         _gestoreGiardino.Changed += OnModelChanged; //registrazione al model
+                        _gestoreGiardino.Giardino.Changed += OnModelChanged; //registrazione al model
                         //OnModelChanged(_gestoreGiardino, EventArgs.Empty);
                     }
                 }
