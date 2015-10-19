@@ -1,5 +1,6 @@
 ﻿
 using SmartGarden.Control;
+using SmartGarden2._0.View;
 using System;
 using System.Windows.Forms;
 using System.Xml.XPath;
@@ -14,6 +15,11 @@ namespace SmartGarden
         {
             InitializeComponent();
             _provinceComboBox.SelectedIndexChanged += CambiaProvincia;
+        }
+
+        public Controller Controller
+        {
+            get { return _controller; }
         }
 
         protected override void OnLoad(EventArgs e)
@@ -36,7 +42,7 @@ namespace SmartGarden
 
             _controller.SettaTimer();
 
-            _controller.CaricaTreeView();
+            //_controller.CaricaTreeView();
 
             _controller.CaricaInfoGiardino();
 
@@ -52,17 +58,7 @@ namespace SmartGarden
         
         private void CaricaProvince()
         {
-            XPathDocument doc = new XPathDocument("ProvinceItaliane.xml");
-            XPathNavigator nav = doc.CreateNavigator();
-
-            XPathExpression expr = nav.Compile("./italia/provincia");
-            XPathNodeIterator iterator = nav.Select(expr);
-
-
-            while (iterator.MoveNext())
-            {
-                _provinceComboBox.ComboBox.Items.Add(iterator.Current.Value);
-            }
+            _controller.CaricaProvinceComboBox(_provinceComboBox.ComboBox);
         }
 
 
@@ -73,11 +69,11 @@ namespace SmartGarden
 
         private void _resetToolStrip_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Sei sicuro di voler procedere?", "Avviso", MessageBoxButtons.YesNo);
+            var result = MessageBox.Show("Questa operazione cancellerà il tuo giardino corrente.\r\nSei sicuro di voler procedere?", "Avviso", MessageBoxButtons.YesNo);
 
             if(result == DialogResult.Yes)
             {
-                //*TO DO* cancella giardino
+                _controller.NuovoGiardino();
             }
         }
     }

@@ -38,7 +38,6 @@ namespace SmartGarden.View
                     {
                         _gestoreGiardino.Changed += OnModelChanged; //registrazione al model
                         _gestoreGiardino.Giardino.Changed += OnModelChanged; //registrazione al model
-                        //OnModelChanged(_gestoreGiardino, EventArgs.Empty);
                     }
                 }
             }
@@ -46,7 +45,13 @@ namespace SmartGarden.View
 
         public Controller Controller
         {
-            get { return _controller; }
+            get
+            {
+                if (_controller != null)
+                    return _controller;
+                else
+                    return new Controller(_gestoreGiardino);
+            }
             set { _controller = value; }
         }
 

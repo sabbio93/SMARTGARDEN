@@ -20,11 +20,11 @@ namespace SmartGarden
         public void AggiornaDatiMeteo()
         {
             //commentate perchè c'è un limite di richieste al servizio meteo, usiamo l'xml già fatto
-            /* if (Città != null)
+             if (Città != null)
              {
                  _xmlDati.Load("http://api.openweathermap.org/data/2.5/forecast/city?q=" + Città + "&APPID=3468347b36b867d8ef1978a625d84616&mode=xml");
                  _xmlDati.Save("DatiMeteo.xml");
-             }*/
+             }
         }
 
         public int NumeroIntervalloTempo

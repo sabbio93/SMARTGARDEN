@@ -35,6 +35,7 @@
             this.aggiungiGiardinoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificaCittàToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._provinceComboBox = new System.Windows.Forms.ToolStripComboBox();
+            this._resetToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.gestisciGiardinoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificaTimerGeneraleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem24 = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,7 +45,6 @@
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this._treeView = new SmartGarden.View.PannelloSinistra();
             this._pannelloDestra = new SmartGarden.View.PannelloDestra();
-            this._resetToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this._statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
@@ -112,6 +112,13 @@
             this._provinceComboBox.Name = "_provinceComboBox";
             this._provinceComboBox.Size = new System.Drawing.Size(121, 23);
             // 
+            // _resetToolStrip
+            // 
+            this._resetToolStrip.Name = "_resetToolStrip";
+            this._resetToolStrip.Size = new System.Drawing.Size(173, 22);
+            this._resetToolStrip.Text = "Nuovo giardino";
+            this._resetToolStrip.Click += new System.EventHandler(this._resetToolStrip_Click);
+            // 
             // gestisciGiardinoToolStripMenuItem
             // 
             this.gestisciGiardinoToolStripMenuItem.Name = "gestisciGiardinoToolStripMenuItem";
@@ -177,7 +184,6 @@
             // _treeView
             // 
             this._treeView.BackColor = System.Drawing.Color.Silver;
-            this._treeView.Controller = null;
             this._treeView.Dock = System.Windows.Forms.DockStyle.Fill;
             this._treeView.GestoreGiardino = null;
             this._treeView.Location = new System.Drawing.Point(0, 0);
@@ -188,20 +194,12 @@
             // _pannelloDestra
             // 
             this._pannelloDestra.BackColor = System.Drawing.Color.DimGray;
-            this._pannelloDestra.Controller = null;
             this._pannelloDestra.Dock = System.Windows.Forms.DockStyle.Fill;
             this._pannelloDestra.GestoreGiardino = null;
             this._pannelloDestra.Location = new System.Drawing.Point(0, 0);
             this._pannelloDestra.Name = "_pannelloDestra";
             this._pannelloDestra.Size = new System.Drawing.Size(923, 616);
             this._pannelloDestra.TabIndex = 0;
-            // 
-            // _resetToolStrip
-            // 
-            this._resetToolStrip.Name = "_resetToolStrip";
-            this._resetToolStrip.Size = new System.Drawing.Size(173, 22);
-            this._resetToolStrip.Text = "Reset";
-            this._resetToolStrip.Click += new System.EventHandler(this._resetToolStrip_Click);
             // 
             // MainWindow
             // 

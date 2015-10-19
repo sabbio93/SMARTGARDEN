@@ -1,7 +1,9 @@
 ﻿
 using SmartGarden.View;
+using SmartGarden2._0.View;
 using System;
 using System.Windows.Forms;
+using System.Xml.XPath;
 
 namespace SmartGarden.Control
 {
@@ -50,7 +52,22 @@ namespace SmartGarden.Control
        internal void CambiaProvincia(string provincia)
         {
             _gestioneGiardino.Giardino.Luogo = provincia;
-            //*TO DO* aggiornare il meteo in base alla provincia
+            _gestioneGiardino.AggiornaInfoMeteo();
+        }
+
+        internal void CaricaProvinceComboBox(ComboBox provinceComboBox)
+        {
+            XPathDocument doc = new XPathDocument("ProvinceItaliane.xml");
+            XPathNavigator nav = doc.CreateNavigator();
+
+            XPathExpression expr = nav.Compile("./italia/provincia");
+            XPathNodeIterator iterator = nav.Select(expr);
+
+
+            while (iterator.MoveNext())
+            {
+                provinceComboBox.Items.Add(iterator.Current.Value);
+            }
         }
 
         internal void CaricaInfoGiardino()
@@ -63,9 +80,31 @@ namespace SmartGarden.Control
             _gestioneGiardino.SettaTimer();
         }
 
-        internal void CaricaTreeView()
+        /*internal void CaricaTreeView()
         {
             _gestioneGiardino.CaricaTreeView();
+        }*/
+
+        internal void NuovoGiardino()
+        {
+            //*TO DO* cancella giardino
+            using (var nuovoGiardinoForm = new Form())
+            {
+                NuovoGiardinoView nuovoGiardinoView = new NuovoGiardinoView();
+                nuovoGiardinoView.Dock = DockStyle.Fill;
+                nuovoGiardinoForm.Text = "Nuovo giardino";
+                nuovoGiardinoForm.Size = new System.Drawing.Size(380, 170);
+                nuovoGiardinoForm.Controls.Add(nuovoGiardinoView);
+
+                var result = nuovoGiardinoForm.ShowDialog();
+
+                if(result == DialogResult.OK)
+                {
+                    _gestioneGiardino.ResetGiardino();
+                    _gestioneGiardino.Giardino.Luogo = nuovoGiardinoView.Controls.Find("_provinceComboBox", false)[0].Text;
+                    _gestioneGiardino.AggiornaInfoMeteo();
+                }
+            }
         }
     }
 }

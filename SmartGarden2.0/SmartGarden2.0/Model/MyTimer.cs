@@ -8,7 +8,7 @@ namespace TimerAttivo
     {
         private Dictionary<string, Timer[]> _timers = new Dictionary<string, Timer[]>();
 
-        public void SetTimer(int momentoApertura, int durataApertura, String name,
+        public void SetTimer(int momentoApertura, int durataApertura, string name,
             ElapsedEventHandler Apri, ElapsedEventHandler Chiudi)
         {
             Timer timerApertura = new Timer(momentoApertura);
@@ -41,6 +41,7 @@ namespace TimerAttivo
 
             return timersForElement;
         }
+        
         
     }
 }

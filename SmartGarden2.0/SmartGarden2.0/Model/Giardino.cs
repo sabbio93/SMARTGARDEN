@@ -53,5 +53,12 @@ namespace SmartGarden
         {
             get { return _cisterna; }
         }
+
+        public void Reset()
+        {
+            _luogo = "";
+            _cisterna = new Cisterna();
+            _settori = new Settori();
+        }
     }
 }
