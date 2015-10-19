@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<italia>
+    <provincia>
+        <citta regione="Sicilia">Agrigento</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Piemonte">Alessandria</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Marche">Ancona</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Valle d'Aosta">Aosta</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Toscana">Arezzo</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Marche">Ascoli Piceno</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Piemonte">Asti</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Campania">Avellino</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Puglia">Bari</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Veneto">Belluno</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Campania">Benevento</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Lombardia">Bergamo</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Piemonte">Biella</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Emilia Romagna">Bologna</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Trentino Alto Adige">Bolzano</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Lombardia">Brescia</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Puglia">Brindisi</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Sardegna">Cagliari</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Sicilia">Caltanisetta</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Molise">Campobasso</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Sardegna">Carbonia Iglesias</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Campania">Caserta</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Sicilia">Catania</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Calabria">Catanzaro</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Abruzzo">Chieti</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Lombardia">Como</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Calabria">Cosenza</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Lombardia">Cremona</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Calabria">Crotone</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Piemonte">Cuneo</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Sicilia">Enna</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Emilia Romagna">Ferrara</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Toscana">Firenze</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Puglia">Foggia</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Emilia Romagna">Forlì e Cesena</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Lazio">Frosinone</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Liguria">Genova</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Friuli Venezia Giulia">Gorizia</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Toscana">Grosseto</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Liguria">Imperia</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Molise">Isernia</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Liguria">La Spezia</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Abruzzo">L'Aquila</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Lazio">Latina</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Puglia">Lecce</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Lombardia">Lecco</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Toscana">Livorno</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Lombardia">Lodi</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Toscana">Lucca</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Marche">Macerata</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Basilicata">Macerata</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Lombardia">Mantova</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Toscana">Massa Carrara</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Sardegna">Medio Campidano</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Sicilia">Messina</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Lombardia">Milano</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Emilia Romagna">Modena</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Campania">Napoli</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Piemonte">Novara</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Sardegna">Nuoro</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Sardegna">Ogliastra</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Sardegna">Olbia Tempio</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Sardegna">Oristano</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Veneto">Padova</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Sicilia">Palermo</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Emilia Romagna">Parma</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Lombardia">Pavia</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Umbria">Perugia</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Marche">Pesaro e Urbino</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Abruzzo">Pescara</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Emilia Romagna">Piacenza</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Toscana">Pisa</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Toscana">Pistoia</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Friuli Venezia Giulia">Pordenone</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Basilicata">Potenza</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Toscana">Prato</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Sicilia">Ragusa</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Emilia Romagna">Ravenna</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Calabria">Reggio Calabria</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Emilia Romagna">Reggio Emilia</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Lazio">Rieti</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Emilia Romagna">Rimini</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Lazio">Roma</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Veneto">Rovigo</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Campania">Salerno</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Sardegna">Sassari</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Liguria">Savona</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Toscana">Siena</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Sicilia">Siracusa</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Lombardia">Sondrio</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Puglia">Taranto</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Abruzzo">Teramo</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Umbria">Terni</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Piemonte">Torino</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Sicilia">Trapani</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Trentino Alto Adige">Trento</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Veneto">Treviso</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Friuli Venezia Giulia">Trieste</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Friuli Venezia Giulia">Udine</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Lombardia">Varese</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Veneto">Venezia</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Piemonte">Verbano Cusio Ossola</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Piemonte">Vercelli</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Veneto">Verona</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Calabria">Vibo Valentia</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Veneto">Vicenza</citta>
+    </provincia>
+    <provincia>
+        <citta regione="Lazio">Viterbo</citta>
+    </provincia>
+</italia>

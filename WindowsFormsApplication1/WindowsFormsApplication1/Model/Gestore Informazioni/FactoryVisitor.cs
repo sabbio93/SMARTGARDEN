@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace WindowsFormsApplication1
+namespace SmartGarden
 {
     internal class FactoryVisitor
     {

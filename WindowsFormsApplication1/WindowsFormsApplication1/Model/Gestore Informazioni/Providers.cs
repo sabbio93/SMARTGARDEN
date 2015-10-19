@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WindowsFormsApplication1.Fornitori;
+using SmartGarden.Fornitori;
 
-namespace WindowsFormsApplication1
+namespace SmartGarden
 {
     class Providers
     {
@@ -17,7 +17,7 @@ namespace WindowsFormsApplication1
             _providerList= new Dictionary<IinformationProvider, IinformationProviderVisitor>();
         }
 
-        //TODO se metto il metodo della somma acqua qui elimino questo metodo e lavoro sulla lista
+        //TODO se metto il metodo della somma acqua qui elimino questo metodo e lavoro sulla lista e non passo a un esterno lista provider
         public List<IinformationProviderVisitor> Visitors
         {
             get
@@ -35,10 +35,12 @@ namespace WindowsFormsApplication1
             return _providerList.ContainsKey(inf);
         }
 
-        internal double GetModifierRequirement(IPianta pianta)
+        internal double GetModifierRequirement(IDataPianta pianta)
         {
             double requiredWater=0;
-
+            //TODO devo stare attento alla gestione dei visitor xkè li riscrcivo
+            //2 casi 2 hanno stesso visitor ma != gestore
+            // 2 hanno stesso visitor e gestore
             foreach(IinformationProvider prov in _providerList.Keys)
             {
                 prov.Accept(_providerList[prov]);

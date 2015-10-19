@@ -4,15 +4,15 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using WindowsFormsApplication1.Fornitori;
+using SmartGarden.Fornitori;
 
-namespace WindowsFormsApplication1
+namespace SmartGarden
 {
     class ProviderVisitorInspector
     {
-        //TODO vedere se ass esterno usa le classi esterne
-        private readonly string @namespaceVisitor = "WindowsFormsApplication1.Fornitori";
-        private readonly string @namespaceProvider = "WindowsFormsApplication1.Fornitori";
+        //TODO cambiare interfaccia con interf esterna
+        private readonly string @namespaceVisitor = "SmartGarden.Fornitori";
+        private readonly string @namespaceProvider = "SmartGarden.Fornitori";
         private readonly Type interfaceVisitor = typeof(IinformationProviderVisitor);
         private readonly Type interfaceProvider = typeof(IinformationProvider);
         private static ProviderVisitorInspector instance=null;
