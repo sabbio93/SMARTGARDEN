@@ -36,6 +36,7 @@ namespace SmartGarden
             _pannelloDestra.Controller = _controller; //set del controller
             _treeView.GestoreGiardino = gestoreGiardino;
             _treeView.Controller = _controller;
+            
 
             _dateStatusBar.Text = DateTime.Now.ToShortDateString();
 

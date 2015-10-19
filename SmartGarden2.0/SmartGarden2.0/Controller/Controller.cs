@@ -32,7 +32,7 @@ namespace SmartGarden.Control
             }
         }
 
-        internal void CambiaViewSettore(string nomeSettore)
+        internal void CaricaViewPiante(string nomeSettore)
         {
 
             Settore settore = _gestioneGiardino.Giardino.Settori.TrovaSettore(nomeSettore);
@@ -81,7 +81,17 @@ namespace SmartGarden.Control
 
         internal void GestisciSettori()
         {
-            throw new NotImplementedException();
+            using (var settoriForm = new Form())
+            {
+                _settoriView settoriView = new _settoriView();
+                settoriView.GestoreGiardino = _gestioneGiardino;
+                settoriView.Controller = this;
+                settoriView.Dock = DockStyle.Fill;
+                settoriForm.Text = "Gestione settori";
+                settoriForm.Size = new System.Drawing.Size(600, 300);
+                settoriForm.Controls.Add(settoriView);
+                settoriForm.ShowDialog();
+            }
         }
 
         internal void NuovoGiardino()

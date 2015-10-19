@@ -157,6 +157,9 @@
     <EmbeddedResource Include="View\PianteView.resx">
       <DependentUpon>PianteView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\SettoriView.resx">
+      <DependentUpon>SettoriView.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
