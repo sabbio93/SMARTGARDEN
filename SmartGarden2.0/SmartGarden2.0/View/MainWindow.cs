@@ -1,6 +1,5 @@
 ﻿
 using SmartGarden.Control;
-using SmartGarden2._0.View;
 using System;
 using System.Windows.Forms;
 using System.Xml.XPath;
@@ -75,6 +74,11 @@ namespace SmartGarden
             {
                 _controller.NuovoGiardino();
             }
+        }
+
+        private void gestisciGiardinoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.GestisciSettori();
         }
     }
 }

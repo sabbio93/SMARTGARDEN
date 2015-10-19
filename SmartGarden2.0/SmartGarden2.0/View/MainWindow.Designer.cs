@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
@@ -124,6 +125,7 @@
             this.gestisciGiardinoToolStripMenuItem.Name = "gestisciGiardinoToolStripMenuItem";
             this.gestisciGiardinoToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.gestisciGiardinoToolStripMenuItem.Text = "Gestisci settori";
+            this.gestisciGiardinoToolStripMenuItem.Click += new System.EventHandler(this.gestisciGiardinoToolStripMenuItem_Click);
             // 
             // modificaTimerGeneraleToolStripMenuItem
             // 
@@ -207,6 +209,7 @@
             this.Controls.Add(this.splitContainer2);
             this.Controls.Add(this._statusStrip);
             this.Controls.Add(this.menuStrip2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1278, 700);
             this.Name = "MainWindow";
             this.Text = "SmartGarden";

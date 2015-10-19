@@ -118,6 +118,12 @@
     <Compile Include="View\PianteView.Designer.cs">
       <DependentUpon>PianteView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\SettoriView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\SettoriView.Designer.cs">
+      <DependentUpon>SettoriView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>

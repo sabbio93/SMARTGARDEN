@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SmartGarden.View;
 
-namespace SmartGarden2._0.View
+namespace SmartGarden.View
 {
     public partial class NuovoGiardinoView : MainView
     {

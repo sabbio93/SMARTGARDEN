@@ -1,6 +1,5 @@
 ﻿
 using SmartGarden.View;
-using SmartGarden2._0.View;
 using System;
 using System.Windows.Forms;
 using System.Xml.XPath;
@@ -80,10 +79,10 @@ namespace SmartGarden.Control
             _gestioneGiardino.SettaTimer();
         }
 
-        /*internal void CaricaTreeView()
+        internal void GestisciSettori()
         {
-            _gestioneGiardino.CaricaTreeView();
-        }*/
+            throw new NotImplementedException();
+        }
 
         internal void NuovoGiardino()
         {
