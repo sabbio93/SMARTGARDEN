@@ -10,7 +10,7 @@ namespace SmartGarden
 {
     class ProviderVisitorInspector
     {
-        //TODO cambiare interfaccia con interf esterna
+        //TODO cambiare interfaccia con interf 
         private readonly string @namespaceVisitor = "SmartGarden.Fornitori";
         private readonly string @namespaceProvider = "SmartGarden.Fornitori";
         private readonly Type interfaceVisitor = typeof(IinformationProviderVisitor);

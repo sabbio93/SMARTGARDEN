@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace SmartGarden
 {
-    interface IinformationProvider
+    interface ImessagePump
     {
-        void Accept(IinformationProviderVisitor visitor);
+        void SendMessage(string message);
     }
 }

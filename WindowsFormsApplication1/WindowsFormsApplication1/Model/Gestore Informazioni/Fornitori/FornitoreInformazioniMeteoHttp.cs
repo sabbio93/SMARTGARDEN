@@ -68,5 +68,31 @@ namespace SmartGarden
             return dato;
         }
 
+        public double GetDato(string datoRichiesto)  //funzione generica per prendere dati
+        {
+            double dato = 0;
+
+            XPathDocument doc = new XPathDocument("DatiMeteo.xml");
+            XPathNavigator nav = doc.CreateNavigator();
+
+            XPathExpression expr = nav.Compile("./weatherdata/forecast/time/" + datoRichiesto);
+            XPathNodeIterator iterator = nav.Select(expr);
+
+            int i = 0;
+
+            while (iterator.MoveNext())
+            {
+                if (i == _numeroIntervalloTempo) //stabilisce quale "intervallo" di 3 ore parsare
+                {
+                    if (iterator.Current.HasAttributes)
+                        dato = double.Parse(iterator.Current.GetAttribute("value", ""), CultureInfo.InvariantCulture);
+                    break;
+                }
+                i++;
+            }
+
+            return dato;
+        }
+
     }
 }

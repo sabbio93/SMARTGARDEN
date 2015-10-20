@@ -63,10 +63,13 @@
     <Compile Include="Model\Gestore Informazioni\Fornitori\IinformationProvider.cs" />
     <Compile Include="Model\Gestore Informazioni\Fornitori\ProviderPrecipitazioniDefaultHttp.cs" />
     <Compile Include="Model\Gestore Informazioni\Fornitori\ProviderTemperaturaDefaultHttp.cs" />
-    <Compile Include="Model\Gestore Informazioni\IDataFlyweight.cs" />
+    <Compile Include="Model\IDataPiantaFlyweight.cs" />
     <Compile Include="Model\IDataPianta.cs" />
+    <Compile Include="Model\IGestioneGiardinoData.cs" />
+    <Compile Include="Model\ImessagePump.cs" />
     <Compile Include="Model\IOpenClose.cs" />
     <Compile Include="Model\IPianta.cs" />
+    <Compile Include="Model\MessagePump.cs" />
     <Compile Include="Model\Pianta.cs" />
     <Compile Include="Model\PiantaFactory.cs" />
     <Compile Include="Model\Piante.cs" />
@@ -76,9 +79,7 @@
     <Compile Include="Model\MyTimer.cs" />
     <Compile Include="Model\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Model\Gestore Informazioni\Providers.cs" />
     <Compile Include="Model\Gestore Informazioni\StandardInformationVisitor.cs" />
-    <Compile Include="Model\Gestore Informazioni\TypeProviders.cs" />
     <Compile Include="Model\SensorePressione.cs" />
     <Compile Include="Model\Settore.cs" />
     <Compile Include="Model\Valvola.cs" />

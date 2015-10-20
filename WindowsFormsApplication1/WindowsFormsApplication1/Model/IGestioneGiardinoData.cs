@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmartGarden
 {
-    interface IinformationProvider
+    interface IGestioneGiardinoData
     {
-        void Accept(IinformationProviderVisitor visitor);
     }
 }

@@ -10,7 +10,7 @@ namespace SmartGarden
     {
         //dynamic act like object in compile time
         void Visit(dynamic informationProvider);
-
-        double GetRequiredWater(IDataPianta pianta);
+        void initialize(IDataPianta pianta, IGestioneGiardinoData _giard);
+        double GetRequiredWater();
     }
 }

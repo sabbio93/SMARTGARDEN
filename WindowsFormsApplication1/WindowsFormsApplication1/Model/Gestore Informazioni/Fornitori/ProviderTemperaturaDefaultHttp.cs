@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartGarden.Fornitori
+namespace SmartGarden
 {
     class ProviderTemperaturaDefaultHttp : IinformationProvider
     {
@@ -21,7 +21,7 @@ namespace SmartGarden.Fornitori
 
         public double GetTemperatura()
         {
-            return giver.GetDato("precipitazioni", new DateTime(), new DateTime());
+            return giver.GetDato("precipitazioni");
         }
     }
 }

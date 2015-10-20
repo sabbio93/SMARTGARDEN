@@ -8,8 +8,7 @@ using System.Windows.Forms;
 namespace SmartGarden
 {  
     class FactoryGestoreInformazioni //Pattern Singleton
-    {
-        //TODO forse è meglio che pianta passi da me?
+    { 
 
         private Dictionary<GestoreInformazioni,int> _gestori;
         private static FactoryGestoreInformazioni instance = null;
@@ -26,26 +25,25 @@ namespace SmartGarden
             return instance;
         }
 
-        public GestoreInformazioni GetGestore(TypeProviders typeproviders)
+        public GestoreInformazioni GetGestore(Dictionary<Type,Type> typeProviders)
         {
-            Providers providers = typeproviders.GetProviders();
             
             foreach (GestoreInformazioni gest in _gestori.Keys)
-            {
-                if (gest.Providers.Equals(providers))
+            { 
+                if (gest.IsGestoreOf(typeProviders))
                 {
                     _gestori[gest]++;
                     return gest;
                 }
             }
 
-            GestoreInformazioni gestore = new GestoreInformazioni();
-            gestore.Providers = providers;
+            GestoreInformazioni gestore = new GestoreInformazioni(typeProviders);
             _gestori.Add(gestore,1);
+
             return gestore;
         }
 
-        public GestoreInformazioni Modifica(GestoreInformazioni OldGestore,TypeProviders typeproviders)
+        public GestoreInformazioni Modifica(GestoreInformazioni OldGestore, Dictionary<Type, Type> typeProviders)
         {
             _gestori[OldGestore]--;
             if(_gestori[OldGestore]<1)
@@ -53,7 +51,7 @@ namespace SmartGarden
                 _gestori.Remove(OldGestore);
             }
 
-            return GetGestore(typeproviders);
+            return GetGestore(typeProviders);
         }
            
     }

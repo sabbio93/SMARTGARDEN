@@ -35,6 +35,11 @@ namespace SmartGarden
                 Changed(this, EventArgs.Empty); //aggiorna la view
         }
 
+        internal static IGestioneGiardinoData GetData()
+        {
+            throw new NotImplementedException();
+        }
+
         private void IniziaInnaffiatura()
         {
             foreach(TurnoItem turno in _giardino.GetTurni())
