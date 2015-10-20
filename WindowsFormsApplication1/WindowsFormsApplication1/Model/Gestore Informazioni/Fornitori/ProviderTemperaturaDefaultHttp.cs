@@ -19,7 +19,7 @@ namespace SmartGarden.Fornitori
             visitor.Visit(this);
         }
 
-        public double GetPrecipitazioni()
+        public double GetTemperatura()
         {
             return giver.GetDato("precipitazioni", new DateTime(), new DateTime());
         }

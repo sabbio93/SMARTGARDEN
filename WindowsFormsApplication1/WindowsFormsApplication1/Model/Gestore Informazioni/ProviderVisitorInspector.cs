@@ -15,17 +15,9 @@ namespace SmartGarden
         private readonly string @namespaceProvider = "SmartGarden.Fornitori";
         private readonly Type interfaceVisitor = typeof(IinformationProviderVisitor);
         private readonly Type interfaceProvider = typeof(IinformationProvider);
-        private static ProviderVisitorInspector instance=null;
-
-        private ProviderVisitorInspector() { }
+        Dictionary<Type, Type> _providers;
        
-        public static ProviderVisitorInspector Get()
-        {
-            if (instance == null)
-                instance = new ProviderVisitorInspector();
-            return instance;
-        }
-
+        #region Self Inspector
         public List<Type> GetListProvider()
         {
             return GetListTypeAssociatedInterface(namespaceProvider, interfaceProvider);
@@ -44,7 +36,9 @@ namespace SmartGarden
                     select type;
             return q.ToList<Type>();
         }
+        #endregion
 
+        #region file inspector
         public List<Type> GetVisitorFromFile( String fileName)
         {
             return GetTypeFromFile(fileName,interfaceVisitor);
@@ -62,7 +56,7 @@ namespace SmartGarden
                     select type;
             return q.ToList<Type>();
         }
-
+        #endregion
 
     }
 }
