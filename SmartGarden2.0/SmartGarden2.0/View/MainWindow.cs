@@ -42,8 +42,6 @@ namespace SmartGarden
 
             _controller.SettaTimer();
 
-            //_controller.CaricaTreeView();
-
             _controller.CaricaInfoGiardino();
 
             CaricaProvince();
@@ -69,12 +67,7 @@ namespace SmartGarden
 
         private void _resetToolStrip_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Questa operazione cancellerà il tuo giardino corrente.\r\nSei sicuro di voler procedere?", "Avviso", MessageBoxButtons.YesNo);
-
-            if(result == DialogResult.Yes)
-            {
-                _controller.NuovoGiardino();
-            }
+            Controller.NuovoGiardino();
         }
 
         private void gestisciGiardinoToolStripMenuItem_Click(object sender, EventArgs e)

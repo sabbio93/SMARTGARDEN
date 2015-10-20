@@ -96,22 +96,27 @@ namespace SmartGarden.Control
 
         internal void NuovoGiardino()
         {
-            //*TO DO* cancella giardino
-            using (var nuovoGiardinoForm = new Form())
+
+            var result1 = MessageBox.Show("Questa operazione cancellerà il tuo giardino corrente.\r\nSei sicuro di voler procedere?", "Avviso", MessageBoxButtons.YesNo);
+
+            if (result1 == DialogResult.Yes)
             {
-                NuovoGiardinoView nuovoGiardinoView = new NuovoGiardinoView();
-                nuovoGiardinoView.Dock = DockStyle.Fill;
-                nuovoGiardinoForm.Text = "Nuovo giardino";
-                nuovoGiardinoForm.Size = new System.Drawing.Size(380, 170);
-                nuovoGiardinoForm.Controls.Add(nuovoGiardinoView);
-
-                var result = nuovoGiardinoForm.ShowDialog();
-
-                if(result == DialogResult.OK)
+                using (var nuovoGiardinoForm = new Form())
                 {
-                    _gestioneGiardino.ResetGiardino();
-                    _gestioneGiardino.Giardino.Luogo = nuovoGiardinoView.Controls.Find("_provinceComboBox", false)[0].Text;
-                    _gestioneGiardino.AggiornaInfoMeteo();
+                    NuovoGiardinoView nuovoGiardinoView = new NuovoGiardinoView();
+                    nuovoGiardinoView.Dock = DockStyle.Fill;
+                    nuovoGiardinoForm.Text = "Nuovo giardino";
+                    nuovoGiardinoForm.Size = new System.Drawing.Size(380, 170);
+                    nuovoGiardinoForm.Controls.Add(nuovoGiardinoView);
+
+                    var result2 = nuovoGiardinoForm.ShowDialog();
+
+                    if (result2 == DialogResult.OK)
+                    {
+                        _gestioneGiardino.ResetGiardino();
+                        _gestioneGiardino.Giardino.Luogo = nuovoGiardinoView.Controls.Find("_provinceComboBox", false)[0].Text;
+                        _gestioneGiardino.AggiornaInfoMeteo();
+                    }
                 }
             }
         }

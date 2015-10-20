@@ -16,7 +16,14 @@ namespace SmartGarden.View
         public NuovoGiardinoView()
         {
             InitializeComponent();
+            _provinceComboBox.SelectedIndexChanged += AbilitaOkButton;
         }
+
+        private void AbilitaOkButton(object sender, EventArgs e)
+        {
+            _okButton.Enabled = true;
+        }
+
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);

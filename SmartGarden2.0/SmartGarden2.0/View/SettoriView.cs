@@ -25,7 +25,7 @@ namespace SmartGarden.View
             foreach (Settore settore in _settori)
             {
                 _dataGridView.Rows.Add(settore.Nome, settore.Piante.ListaPiante.Count,
-                    settore.Piante.GetFabbisognoTotale(), "3 ore", "Piante");
+                    settore.Piante.GetFabbisognoTotale() + " mm", "3 ore", "Piante");
             }
         }
 
